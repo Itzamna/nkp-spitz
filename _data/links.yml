@@ -1,0 +1,76 @@
+- url: index
+  alt: Главная
+  
+- url: docs
+  alt: Документы 
+  submenu:
+  - alt: Устав НКП
+    url: docs-ustav
+
+  - alt: Положение о монопородных выставках
+    url: docs-mono
+    
+  - alt: Правила присвоения титулов
+    url: docs-titles
+    
+  - alt: Правила вступления и выхода из НКП
+    url: docs-entry
+    
+- url: breed
+  alt: О породе
+  submenu:
+  - alt: Стандарт породы
+    url: breed-standart
+
+  - alt: Рекомендации по тестированию
+    url: breed-tests
+    
+  - alt: Племенное положение РКФ
+    url: breed-docs
+    
+  - alt: Статьи
+    url: articles
+    
+- url: members
+  alt: Члены НКП
+  
+- url: champions
+  alt: Чемпионы НКП
+  submenu:
+  - alt: Померанские шпицы
+    url: pomeranian-champions
+
+  - alt: Малые шпицы
+    url: klein-champions
+    
+  - alt: Средние шпицы
+    url: mittle-champions
+    
+  - alt: Большие шпицы
+    url: gross-champions
+    
+  - alt: Вольфшпицы
+    url: wolf-champions   
+    
+- url: shows
+  alt: Мероприятия НКП
+  submenu:
+  - alt: Расписание выставок
+    url: shows-calendar
+
+  - alt: Результаты выставок
+    url: shows-result
+    
+- url: blanks
+  alt: Бланки и формы
+  submenu:
+  - alt: Вступление в НКП (физические лица)
+    url: membership-form-fiz
+    
+  - alt: Вступление в НКП (клубы)
+    url: membership-form-club
+    
+  - alt: Внесение данных о Чемпионах НКП
+    url: champions-form        
+- url: contacts
+  alt: Контакты

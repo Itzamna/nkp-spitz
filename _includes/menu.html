@@ -1,0 +1,26 @@
+<div class="menu-container">        
+  <ul class="nav navbar-nav ">
+      {% for link in site.data.links %}
+        {% if link.submenu  %}
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle">
+            {{ link.alt }}
+          </a>
+          <ul class="dropdown-menu">
+            {% for sublink in link.submenu %}
+            <li><a href="{{ site.url }}/{{ sublink.url }}.html"><i class="fa fa-check color-green"></i> {{ sublink.alt }}</a></li>
+            {% endfor %}
+
+          </ul>
+        </li>       
+        {% else %}   
+        <li {% if page.menu == '{{ site.url }}/{{ link.alt }}' %} class='active' {% endif %} >
+          <a href="{{ site.url }}/{{ link.url }}.html">{{ link.alt }}</a>
+        </li>     
+        {% endif %}
+    
+      {% endfor %}
+   </ul>  
+<p class="copyright-text">&copy; 2017 "НКП НЕМЕЦКИЙ ШПИЦ". <br>Все права защищены.</p>
+  
+</div>
