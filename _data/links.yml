@@ -29,6 +29,9 @@
   - alt: Статьи
     url: articles
     
+  - alt: Литература
+    url: literature   
+    
 - url: members
   alt: Члены НКП
   
