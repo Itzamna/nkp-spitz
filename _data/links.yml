@@ -72,7 +72,7 @@
     url: membership-form-club
 
   - alt: Заявление о проведении монопородной выставки
-    url: membership-form-fiz 
+    url: blank-statement-show
     
   - alt: Внесение данных о Чемпионах НКП
     url: champions-form   
