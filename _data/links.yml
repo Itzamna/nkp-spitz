@@ -70,8 +70,12 @@
     
   - alt: Вступление в НКП (клубы)
     url: membership-form-club
+
+  - alt: Заявление о проведении монопородной выставки
+    url: membership-form-fiz 
     
   - alt: Внесение данных о Чемпионах НКП
-    url: champions-form        
+    url: champions-form   
+    
 - url: contacts
   alt: Контакты
