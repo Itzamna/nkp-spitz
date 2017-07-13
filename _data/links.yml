@@ -32,6 +32,9 @@
   - alt: Литература
     url: literature   
     
+- url: presidium
+  alt: Президиум НКП
+  
 - url: members
   alt: Члены НКП
   
@@ -75,7 +78,7 @@
     url: blank-statement-show
     
   - alt: Внесение данных о Чемпионах НКП
-    url: champions-form   
+    url: champions-form 
     
 - url: contacts
   alt: Контакты
