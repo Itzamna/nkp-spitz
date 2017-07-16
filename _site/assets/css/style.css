@@ -98,10 +98,7 @@ h2.sale{
 }
 /*Boxed Layout
 ------------------------------------*/
-.wrapper, .header {
-	background: #fff;
 
-}
 .dropdown-menu>li>a {
 
    white-space: normal !important; 
@@ -122,8 +119,9 @@ h2.sale{
 }
 .wrapper {
   background-image: url(../img/bg/symphony-color1.png);
+  min-height:1200px;
   width: 100%;
-  height: 100%;
+  height: auto;
   position: absolute;
   top: 0;
   bottom: 0;

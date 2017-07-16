@@ -80,6 +80,9 @@ menu: members
                             <th>
                             <p><strong>Город</strong></p>
                             </th>
+                            <th>
+                            <p><strong>Питомник/приставка</strong></p>
+                            </th>                            
                           </tr>
                         </thead>
                         <tbody>
@@ -90,7 +93,10 @@ menu: members
                             </td>
                             <td>
                             <p><strong>{{ mmb.city }}</strong></p>
-                            </td>            
+                            </td>   
+                            <td>
+                            <p><strong>{{ mmb.kennel }}</strong></p>
+                            </td>                             
                           </tr>    
                        {% endfor %}            
                         </tbody>
