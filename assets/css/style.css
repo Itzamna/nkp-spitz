@@ -232,7 +232,7 @@ select::-ms-expand {
   
 }
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .translater * {
   color: #555 !important;
