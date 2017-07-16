@@ -119,14 +119,11 @@ h2.sale{
 }
 .wrapper {
   background-image: url(../img/bg/symphony-color1.png);
-  min-height:1200px;
+  min-height:800px;
   width: 100%;
   height: auto;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;  
+  background-clip: border-box; 
 }
 .boxed-layout {
   padding: 0;
@@ -232,7 +229,9 @@ select::-ms-expand {
   
 }
 h1, h2, h3, h4, h5, h6{
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cuprum', sans-serif;
+  
+  
 }
 .translater * {
   color: #555 !important;
