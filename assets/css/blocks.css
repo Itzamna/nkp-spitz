@@ -5029,6 +5029,7 @@
 }
 
 .owl-carousel-v6 .owl-wrapper-outer {
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -5095,11 +5096,35 @@
 
 /*Owl Clients v2
 ------------------------------------*/
-.owl-clients-v1 img {
+.owl-clients-v1 .item img {
+  height: 150px;
   width:  auto;
-  height: 120px;
+  display: inline-block;
 }
+.owl-clients-v6 {
+  margin: 0px auto;
+  overflow: hidden;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.owl-clients-v6  img {
+  width:  auto;
+  height: 140px;
+  display: inline-block;
+  
+}  
+.owl-clients-v1 .item {
+  margin: 3px;
+  display: block;
 
+}
+ 
+ .owl-item {
+  width: 200px;
+ 
+
+} 
 .owl-clients-v1 .owl-pagination {
     display: none;
 }
