@@ -2,7 +2,7 @@
   alt: Главная
   
 - url: docs
-  alt: Положения
+  alt: Документы
   submenu:
   - alt: Устав НКП
     url: docs-ustav
