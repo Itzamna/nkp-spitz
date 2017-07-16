@@ -32,6 +32,9 @@ menu: members
                             <th>
                             <p><strong>Город</strong></p>
                             </th>
+                            <th>
+                            <p><strong>Руководитель</strong></p>
+                            </th>                            
                           </tr>
                         </thead>
                         <tbody>
@@ -42,7 +45,10 @@ menu: members
                             </td>
                             <td>
                             <p><strong>{{ cl.city }}</strong></p>
-                            </td>            
+                            </td> 
+                            <td>
+                            <p><strong>{{ cl.organizer }}</strong></p>
+                            </td>                             
                           </tr>    
                        {% endfor %}            
                         </tbody>
