@@ -5101,6 +5101,11 @@
   width:  100%;
   display: block;
 }
+.owl-clients-spitz .item  {
+ 
+  width:  auto !important;
+
+}  
 .owl-clients-v6 {
   margin: 0px auto;
   overflow: hidden;

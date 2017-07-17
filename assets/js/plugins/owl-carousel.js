@@ -111,7 +111,8 @@ var OwlCarousel = function () {
             });
           
             jQuery(".owl-clients-spitz").owlCarousel({
-                autoPlay : 3000,              
+                autoPlay : 3000, 
+                items : 4,                         
                 itemsDesktop : [1000,5],
                 itemsDesktopSmall : [900,4],
                 itemsTablet: [600,3],
@@ -119,8 +120,7 @@ var OwlCarousel = function () {
                 margin:10,
                 loop:true,
                 autoWidth:true,
-                AutoHeight:true,
-                items : 4           
+                AutoHeight:true
             });
 
             //Owl Clients v2
