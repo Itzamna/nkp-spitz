@@ -7,13 +7,6 @@ menu: index
     <h2>НКП <span class="color-green">НЕМЕЦКИЙ ШПИЦ</span></h2>
   </div>
 </div>
-<center>
-<div class="owl-clients-v6 center-block">
-  {% for i in (1..5) %}
-      <img src="{{ site.url }}/assets/img/slide/mid/{{ i }}.jpg">
-  {% endfor %}
-</div>
-</center>
 <div class="container content  entry-content" >
   <div class="row">
     <div class="col-md-12">
@@ -27,14 +20,14 @@ menu: index
     </div>
   </div>
 </div>
-<center>
-<div class="owl-clients-v6 center-block">
-  {% for i in (6..10) %}
-      <img src="{{ site.url }}/assets/img/slide/mid/{{ i }}.jpg">
+
+<div class="owl-clients-spitz">
+  {% for i in (1..10) %}
+    <div class="item" >
+        <img src="{{ site.url }}/assets/img/slide/{{ i }}.jpg">
+    </div>  
   {% endfor %}
 </div>
-</center>  
-
 <div class="container content  entry-content" >  
   <div class="row">
     <div class="title-box-v2">

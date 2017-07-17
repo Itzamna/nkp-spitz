@@ -99,14 +99,29 @@ var OwlCarousel = function () {
 
             //Owl Clients v1
             jQuery(".owl-clients-v1").owlCarousel({
-                items : 7,
-                autoPlay : 5000,
+                autoPlay : 3000,              
                 itemsDesktop : [1000,5],
                 itemsDesktopSmall : [900,4],
                 itemsTablet: [600,3],
-                itemsMobile : [300,2]
+                itemsMobile : [300,2],
+                margin:10,
+                loop:true,
+                autoHeith:true,
+                items : 3           
             });
-
+          
+            jQuery(".owl-clients-spitz").owlCarousel({
+                autoPlay : 3000,              
+                itemsDesktop : [1000,5],
+                itemsDesktopSmall : [900,4],
+                itemsTablet: [600,3],
+                itemsMobile : [300,2],
+                margin:10,
+                loop:true,
+                autoWidth:true,
+                AutoHeight:true,
+                items : 4           
+            });
 
             //Owl Clients v2
             jQuery(".owl-clients-v2").owlCarousel({

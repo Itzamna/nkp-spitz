@@ -5096,10 +5096,10 @@
 
 /*Owl Clients v2
 ------------------------------------*/
-.owl-clients-v1 .item img {
-  height: 150px;
-  width:  auto;
-  display: inline-block;
+.owl-clients-spitz .item img {
+  height: 200px;
+  width:  100%;
+  display: block;
 }
 .owl-clients-v6 {
   margin: 0px auto;
@@ -5114,17 +5114,11 @@
   display: inline-block;
   
 }  
-.owl-clients-v1 .item {
+.owl-clients-spitz  .item {
   margin: 3px;
   display: block;
 
 }
- 
- .owl-item {
-  width: 200px;
- 
-
-} 
 .owl-clients-v1 .owl-pagination {
     display: none;
 }
