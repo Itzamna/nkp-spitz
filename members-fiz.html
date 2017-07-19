@@ -1,0 +1,46 @@
+---
+layout: default
+menu: members
+---
+<div class="container content" >
+  <div class="title-box-v2">
+    <h2>Члены НКП - <span class="color-green">физические лица</span></h2>
+  </div>
+</div>
+<div class="container content  entry-content" >
+  <div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>
+              <p><strong>ФИО</strong></p>
+              </th>         
+              <th>
+              <p><strong>Город</strong></p>
+              </th>
+              <th>
+              <p><strong>Питомник/приставка</strong></p>
+              </th>                            
+            </tr>
+          </thead>
+          <tbody>
+            {% for mmb in site.data.members %}
+            <tr>
+              <td>
+              <p><strong>{{ mmb.name }}</strong></p>
+              </td>
+              <td>
+              <p><strong>{{ mmb.city }}</strong></p>
+              </td>   
+              <td>
+              <p><strong>{{ mmb.kennel }}</strong></p>
+              </td>                             
+            </tr>    
+         {% endfor %}            
+          </tbody>
+        </table>      
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,46 @@
+---
+layout: default
+menu: members-clubs
+---
+<div class="container content" >
+  <div class="title-box-v2">
+    <h2>Члены НКП - <span class="color-green">организации</span></h2>
+  </div>
+</div>
+<div class="container content  entry-content" >
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+            <p><strong>Название организации</strong></p>
+            </th>         
+            <th>
+            <p><strong>Город</strong></p>
+            </th>
+            <th>
+            <p><strong>Руководитель</strong></p>
+            </th>                            
+          </tr>
+        </thead>
+        <tbody>
+          {% for cl in site.data.clubs %}
+          <tr>
+            <td>
+            <p><strong>{{ cl.club }}</strong></p>
+            </td>
+            <td>
+            <p><strong>{{ cl.city }}</strong></p>
+            </td> 
+            <td>
+            <p><strong>{{ cl.organizer }}</strong></p>
+            </td>                             
+          </tr>    
+       {% endfor %}            
+        </tbody>
+      </table>     
+    </div>
+  </div>
+</div>
+

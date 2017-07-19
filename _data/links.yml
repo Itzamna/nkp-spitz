@@ -37,7 +37,13 @@
   
 - url: members
   alt: Члены НКП
-  
+  submenu:
+  - alt: Клубы
+    url: members-clubs
+
+  - alt: Физические лица
+    url: members-fiz
+   
 - url: champions
   alt: Чемпионы НКП
   submenu:
