@@ -48,19 +48,19 @@
   alt: Чемпионы НКП
   submenu:
   - alt: Померанские шпицы
-    url: pomeranian-champions
+    url: champions/pomeranian
 
   - alt: Малые шпицы
-    url: klein-champions
+    url: champions/klein
     
   - alt: Средние шпицы
-    url: mittle-champions
+    url: champions/mittle
     
   - alt: Большие шпицы
-    url: gross-champions
+    url: champions/gross
     
   - alt: Вольфшпицы
-    url: wolf-champions   
+    url: champions/wolf
     
 - url: shows
   alt: Мероприятия НКП

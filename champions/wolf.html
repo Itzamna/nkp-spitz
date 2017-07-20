@@ -1,0 +1,41 @@
+---
+layout: default
+menu: wolf-champions
+---
+<div class="container content" >
+  <div class="title-box-v2">
+    <h2>Чемпионы НКП - <span class="color-green">вольфшпицы</span></h2>
+  </div>
+</div>
+<div class="container content  entry-content" >
+  <div class="row">
+    <div class="col-md-12">
+      {% for ch in site.data.champions %}
+            {% if ch.breed == 'Немецкий шпиц - вольфшпиц/кеесхонд'  %}
+                {% if ch.year == '2015' %}
+                <h1>{{ ch.year }}</h1>
+                <div class="row">
+                <div class="col-md-4 col-sm-6 md-margin-bottom-60">
+                  <img class="img-responsive" src="{{ ch.photo }}" alt="">
+                </div> 
+                <div class="col-md-8 col-sm-6 md-margin-bottom-60">
+                  <p>{{ ch.Name }}</p>
+                  <p><small>{{ ch.type }}</small></p>
+                  <p><small>{{ ch.pedigree }}</small></p>
+                  <p><small>{{ ch.sex }}</small></p>
+                  <p><small>{{ ch.dob }}</small></p>
+                  <p><small>({{ ch.father }} x {{ ch.mother }})</small></p>
+                  <p><small>Заводчик: {{ ch.breeder }}</small></p>
+                  <p><small>Владелец: {{ ch.owner }}</small></p>
+                </div>                    
+                </div>    
+                {% endif %}
+
+            {% endif %}
+
+      {% endfor %}    
+  </div>
+</div>  
+</div>
+  
+
