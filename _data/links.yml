@@ -50,16 +50,31 @@
   - alt: Померанские шпицы
     url: champions/pomeranian
 
-  - alt: Малые шпицы
-    url: champions/klein
+  - alt: Малые шпицы (оранж, сер. и др. окрасы)
+    url: champions/klein-orange
     
-  - alt: Средние шпицы
-    url: champions/mittle
+  - alt: Малые шпицы (белый окрас)
+    url: champions/klein-white
     
-  - alt: Большие шпицы
-    url: champions/gross
+  - alt: Малые шпицы (чер. и кор. окрасы)
+    url: champions/klein-black
     
-  - alt: Вольфшпицы
+  - alt: Средние шпицы (оранж, сер. и др. окрасы)
+    url: champions/mittle-orange
+    
+  - alt: Средние шпицы (белый окрас)
+    url: champions/mittle-white
+    
+  - alt: Средние шпицы (чер. и кор. окрасы)
+    url: champions/mittle-black
+
+  - alt: Большие шпицы (белый окрас)
+    url: champions/gross-white
+    
+  - alt: Большие шпицы (чер. и кор. окрасы)
+    url: champions/gross-black
+        
+  - alt: Вольфшпицы/кеесхонды
     url: champions/wolf
     
 - url: shows

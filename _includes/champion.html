@@ -1,0 +1,62 @@
+{% assign years = breed.items | group_by:"year" %}
+
+{% for year in years %}
+  <div class="heading heading-v1"><h2>{{ year.name }}</h2></div>
+
+  {% assign sexes = year.items | group_by:"sex" %}
+
+    {% for sex in sexes %}
+
+    <div class="headline">
+      <h2>
+      {% if sex.name == 'Кобель' %}
+        Кобели
+      {% else %}
+        Cуки
+      {% endif %}
+      </h2> 
+    </div>
+
+
+      {% assign types = sex.items | group_by:"type" %}
+
+        {% for type in types %}
+            <h4 class="text-center">
+              {% if type.name == 'Чемпион НКП (ЧК национальный выставки)' %}
+                Чемпион Национальной Монопородной Выставки
+              {% endif %}
+
+              {% if type.name == 'Юный Чемпион НКП (ЮЧК национальный выставки)' %}
+                Юный Чемпион Национальной Монопородной Выставки
+              {% endif %}
+
+              {% if type.name == 'Юный Чемпион НКП (по набору сертификатов)' %}
+                Юные Чемпионы НКП
+              {% endif %}
+
+              {% if type.name == 'Чемпион НКП (по набору сертификатов)' %}
+                Чемпионы НКП
+              {% endif %}
+           </h4>
+          {% assign dogchampions = type.items %}
+          {% for ch in dogchampions %}
+
+          <div class="tag-box tag-box-v2 box-shadow shadow-effect-3 margin-bottom-20">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 md-margin-bottom-20">
+                <img class="img-responsive" src="{{ ch.photo }}" alt="">
+              </div> 
+              <div class="col-md-8 col-sm-6 md-margin-bottom-20">
+                <h4>{{ ch.Name }}<br><small>({{ ch.father }} x {{ ch.mother }})</small></h4>
+                <p><small>Номер родословной: {{ ch.pedigree }}</small></p>
+                <p><small>Дата рождения: {{ ch.dob | date: "%d-%m-%Y"}}</small></p>
+                <p><small>Заводчик: {{ ch.breeder }}</small></p>
+                <p><small>Владелец: {{ ch.owner }}</small></p>
+              </div>                    
+            </div> 
+         </div>   
+
+        {% endfor %}    
+      {% endfor %}    
+    {% endfor %}    
+{% endfor %}   
