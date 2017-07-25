@@ -8,10 +8,18 @@ menu: pomeranian-champions
   </div>
 </div>
 <div class="container content  entry-content" >
-  <div class="row">
-    <div class="col-md-12">
-      <p>Приносим извинения, сайт находится в стадии разработки.</p>
-    </div>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-md-12">
+        {% assign breeds = site.data.champions | group_by:"breed" %}
 
+        {% for breed in breeds %}
+
+          {% if breed.name == 'Немецкий цвергшпиц'  %}
+
+            {% include champion.html %}   
+
+          {% endif %}
+        {% endfor %}    
+    </div>
+  </div>  
+</div>
