@@ -28,13 +28,21 @@ menu: members
             {% for mmb in site.data.members %}
             <tr>
               <td>
-              <p><strong>{{ mmb.name }}</strong></p>
+              <p><strong>
+                {{ mmb.name }}                
+                </strong></p>
               </td>
               <td>
               <p><strong>{{ mmb.city }}</strong></p>
               </td>   
               <td>
-              <p><strong>{{ mmb.kennel }}</strong></p>
+              <p><strong>
+                  {% if $mmb.link %}
+                    <a href="{{ mmb.link }}">{{ mmb.kennel }}</a>                
+                  {% else %} 
+                      {{ mmb.kennel }}
+                  {% endif %}    
+                </strong></p>
               </td>                             
             </tr>    
          {% endfor %}            

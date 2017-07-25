@@ -27,8 +27,14 @@ menu: members-clubs
         <tbody>
           {% for cl in site.data.clubs %}
           <tr>
-            <td>
-            <p><strong>{{ cl.club }}</strong></p>
+            <td>  
+            <p><strong>
+              {% if $cl.link%}
+              <a href="{{ cl.link }}">{{ cl.club }}</a>
+              {% else %}  
+              {{ cl.club }}
+              {% endif %}  
+              </strong></p>
             </td>
             <td>
             <p><strong>{{ cl.city }}</strong></p>
