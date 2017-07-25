@@ -1,6 +1,6 @@
 {% assign years = breed.items | group_by:"year" %}
-
-{% for year in years %}
+{{ years | sort: 'name' }}
+{% for year in years  %}
   <div class="heading heading-v1"><h2>{{ year.name }}</h2></div>
 
   {% assign sexes = year.items | group_by:"sex" %}
