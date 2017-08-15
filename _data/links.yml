@@ -94,9 +94,6 @@
     
   - alt: Вступление в НКП (клубы)
     url: membership-form-club
-
-  - alt: Заявление о проведении монопородной выставки
-    url: blank-statement-show
     
   - alt: Внесение данных о Чемпионах НКП
     url: champions-form 
