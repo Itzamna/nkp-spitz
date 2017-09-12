@@ -239,3 +239,14 @@ h1, h2, h3, h4, h5, h6{
   font-size: 15px;
   
 }
+
+.table-info, .table-info > th, .table-info > td {
+  background-color: #e8faff;
+}
+
+.table-success, .table-success > th, .table-success > td {
+  background-color: #f9fff6;
+}
+.table-danger, .table-danger > th, .table-danger > td {
+  background-color: #fdefef;
+}

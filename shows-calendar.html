@@ -4,14 +4,78 @@ menu: shows-calendar
 ---
 <div class="container content" >
   <div class="title-box-v2">
-    <h2>Расписание <span class="color-green">выставок НКП</span></h2>
+    <h2>Календарь <span class="color-green">выставок НКП</span> на 2018 год</h2>
   </div>
 </div>
 <div class="container content  entry-content" >
   <div class="row">
-    <div class="col-md-12">
-      <p>До 15 августа 2017 года осуществляется сбор заявок на проведение монопородных выставок НКП "Немецкий шпиц" в 2018 году.</p>
-      <p>Для подачи заявки необходимо заполнить <a href="/blank-statement-show.html">электронную форму на сайте</a>.</p>      
+    <div class="col-md-12">   
+      <table class="table  table-hover">
+        <thead>
+          <tr>
+            <th>
+            <p><strong>Даты проведения</strong></p>
+            </th>                     
+            <th>
+            <p><strong>Город</strong></p>
+            </th>
+            <th>
+            <p><strong>Клуб</strong></p>
+            </th>  
+            <th>
+            <p><strong>Ранг</strong></p>
+            </th>             
+            <th>
+            <p><strong>Федерация</strong></p>
+            </th>   
+ 
+            <th>
+            <p><strong>Контакты</strong></p>
+            </th>                
+          </tr>
+        </thead>
+        <tbody>
+          {% for cl in site.data.calendar %}
+         {% if cl.rang == 'ПК' %}
+          <tr class="table-info">
+         {% endif %}
+         {% if cl.rang == 'КЧК' %}
+          <tr class="table-success">
+         {% endif %}        
+         {% if cl.rang == 'ЧК' %}
+          <tr class="table-danger">
+         {% endif %}              
+            <td>  
+            <p><strong>
+         {% if cl.date1 == cl.date2 %}              
+                {{ cl.date1}}
+          {% endif %}        
+         {% if cl.date1 != cl.date2 %}              
+                {{ cl.date1}}<br>{{ cl.date2}} 
+          {% endif %}        
+              
+              </strong></p>
+            </td>            
+            <td>
+            <p><strong>{{ cl.city }}</strong></p>
+            </td> 
+            <td>
+            <p><strong>{{ cl.club }}</strong></p>
+            </td>  
+            <td>
+            <p><strong>{{ cl.rang }}</strong></p>
+            </td>              
+            <td>
+            <p>{{ cl.federation }}</p>
+            </td> 
+     
+            <td>
+            <p>{{ cl.leader }}<br>{{ cl.contacts }}</p>
+            </td>             
+          </tr>    
+       {% endfor %}            
+        </tbody>
+      </table>     
     </div>
   </div>
 </div>

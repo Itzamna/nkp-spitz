@@ -80,7 +80,7 @@
 - url: shows
   alt: Мероприятия НКП
   submenu:
-  - alt: Расписание выставок
+  - alt: Календарь выставок
     url: shows-calendar
 
   - alt: Результаты выставок
