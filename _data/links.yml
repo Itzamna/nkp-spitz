@@ -77,6 +77,9 @@
   - alt: Вольфшпицы/кеесхонды
     url: champions/wolf
     
+- url: tests/index
+  alt: Результаты тестов
+
 - url: shows
   alt: Мероприятия НКП
   submenu:
@@ -97,6 +100,9 @@
     
   - alt: Внесение данных о Чемпионах НКП
     url: champions-form 
+    
+  - alt: Внесение данных о протестированных собаках
+    url: tests-form     
     
 - url: contacts
   alt: Контакты
