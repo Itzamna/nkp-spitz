@@ -250,3 +250,31 @@ h1, h2, h3, h4, h5, h6{
 .table-danger, .table-danger > th, .table-danger > td {
   background-color: #fdefef;
 }
+table.test-results {
+   font-size: 0.9em;
+}
+
+table.test-results th{
+   color: #555;
+}
+table.test-results td.test-name{
+   text-transform: capitalize;
+}
+td.type-test{
+  text-align: center;
+  font-size:1em;
+  font-weight:bold;
+background-color: #e8faff;  
+}
+td.breed-test{
+  text-align: center;
+  font-size:1em;
+  font-weight:bold;
+background-color: #fdefef;  
+}
+table.table-calendar {
+   font-size: 0.9em;
+}
+table.table-calendar thead.table-info > th {
+  background-color: #e8faff;
+}

@@ -81,12 +81,12 @@
   alt: Результаты тестов
 
 - url: shows
-  alt: Мероприятия НКП
+  alt: Выставки НКП
   submenu:
-  - alt: Календарь выставок
+  - alt: Календарь
     url: shows-calendar
 
-  - alt: Результаты выставок
+  - alt: Результаты
     url: shows-result
     
 - url: blanks

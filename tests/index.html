@@ -11,11 +11,56 @@ menu: champions-form
 <div class="container content  entry-content" >
   <div class="row">
     <div class="col-md-12">     
-      <p>Приносим извинения, раздел находится в стадии наполнения.</p>
-      <br>
       <p>НКП Немецкий шпиц рекомендует протестировать всех собак, участвующих в племенном разведении. При подборе пары поинтересуйтесь сертификатами генетических исследований партнера.</p>
       <p>Мы принимаем результаты исследований суставов, пателлы, глаз, а также результаты различных ДНК-тестов.</p>
       <p>Для подачи информации о протестированных собаках просьба <a href="tests-form.html">заполнить форму</a>.</p>
-    </div>
+      
+
+      <table class="table table-bordered test-results">
+        <col width="20%"><col width="12%"><col width="10%"><col width="35%"><col width="10%"><col width="13%">
+        <thead>
+          <tr>
+            <th>Кличка</th>         
+            <th>№ родословной</th>
+            <th>ДР</th>  
+            <th>Результат</th> 
+            <th>Дата теста</th>  
+            <th>ФИО врача</th>                  
+          </tr>
+        </thead>
+        <tbody>
+      {% assign breeds = site.data.tests | group_by:"breed" %}
+      
+        {% for breed in breeds %}
+
+        {% assign types = breed.items | group_by:"type" %}
+          <tr>
+            <td class="breed-test" colspan="6">{{breed.name}}</td>                                    
+          </tr>           
+          {% for type in types %}
+              <tr>
+                <td class="type-test" colspan="6">{{type.name}}</td>                                    
+              </tr>            
+          {% assign results = type.items | sort:"result,name" %}
+
+             {% for result in results %}
+
+              <tr>
+                <td class="test-name">{{ result.name }}</td>            
+                <td>{{ result.pedigree }}</td>
+                <td>{{ result.dob }}</td>
+                <td>{{ result.result }}</td>
+                <td>{{ result.date }}</td>
+                <td>{{ result.doctor }}</td>                         
+              </tr>    
+             {% endfor %}   <!-- result-->    
+         {% endfor %}  <!-- type-->       
+      {% endfor %}  <!-- breed-->    
+         
+        </tbody>
+      </table>         
+     </div>
   </div>
-</div>      
+</div>         
+      
+  
