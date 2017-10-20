@@ -30,8 +30,7 @@ menu: champions-form
           </tr>
         </thead>
         <tbody>
-      {% assign breeds = site.data.tests | group_by:"breed" %}
-      
+      {% assign breeds = site.data.tests | group_by:"breed"| sort:"name" %}     
         {% for breed in breeds %}
 
         {% assign types = breed.items | group_by:"type" %}
