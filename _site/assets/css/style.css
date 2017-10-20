@@ -272,6 +272,12 @@ td.breed-test{
   font-weight:bold;
 background-color: #fdefef;  
 }
+td.class-test{
+  text-align: center;
+  font-size:1em;
+  font-weight:bold;
+background-color: #e4e4e4;  
+}
 table.table-calendar {
    font-size: 0.9em;
 }

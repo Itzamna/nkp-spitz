@@ -9,8 +9,109 @@ menu: shows-result
 </div>
 <div class="container content  entry-content" >
   <div class="row">
-    <div class="col-md-12">
-      <p>Приносим извинения, сайт находится в стадии разработки.</p>
+    <div class="col-md-12">    
+      
+      
+      {% assign clubs = site.data.showresult | group_by:"club" %}
+      {% for count in (1..1) %}
+      {% for club in clubs %}
+           {% assign show = club.items %}  
+           {% assign info-show = show[0] %}  
+           
+          <div class="panel-group acc-v1" id="accordion-{{count}}">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{count}}" href="#collapse-{{count}}" aria-expanded="false">
+                     {{info-show.date}}. {{info-show.city}}. <span class="color-green">{{club.name}}</span>. Монопородная выставка "Немецкий шпиц" ранга {{info-show.rang}}.                               
+									</a>
+								</h4>
+							</div>
+							<div id="collapse-{{count}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+                  <table class="table table-bordered test-results">
+                    <col width="5%"><col width="30%"><col width="15%"><col width="10%"><col width="15%"><col width="10%"><col width="25%">
+                    <thead>
+                      <tr>
+                        <th>Номер по каталогу</th>                     
+                        <th>Кличка</th>         
+                        <th>№ родословной</th>
+                        <th>Дата рождения</th>  
+                        <th>Результат</th> 
+                        <th>Сертификат</th>  
+                        <th>Эксперт</th>                  
+                      </tr>
+                    </thead>
+                    <tbody>      
+                    {% assign breeds = club.items | group_by:"breed"%}
+
+                      {% for breed in breeds %}
+                          <tr>
+                            <td class="breed-test" colspan="7"> {{breed.name}}</td>                                    
+                          </tr>       
+
+                      {% assign sexes = breed.items | group_by:"sex"%}
+
+                         {% for sex in sexes %}          
+                          <tr>
+                            <td class="type-test" colspan="7">
+                              {% if sex.name=="К" %}Кобели{% endif %}  
+                              {% if sex.name=="С" %}Суки{% endif %}  
+                            </td>                                    
+                          </tr>
+                       {% assign classes = sex.items | group_by:"class" %}
+
+                         {% for class in classes %}          
+                          <tr>
+                            <td class="class-test" colspan="7">Класс: 
+                              {% if class.name=="Б" %}Беби{% endif %}  
+                              {% if class.name=="Щ" %}Щенков{% endif %}  
+                              {% if class.name=="ЮН" %}Юниоров{% endif %}  
+                              {% if class.name=="ОТК" %}Открытый{% endif %}  
+                              {% if class.name=="ПРМ" %}Промежуточный{% endif %}  
+                              {% if class.name=="ЧЕМ" %}Чемпионов{% endif %}  
+                              {% if class.name=="ПОБНКП" %}Победителей НКП{% endif %}  
+                              {% if class.name=="ЧЕМНКП" %}Чемпионов НКП{% endif %}  
+                              {% if class.name=="ВЕТ" %}Ветеранов{% endif %}  
+
+
+                            </td>                                    
+                          </tr>    
+
+                      {% assign results = class.items %}
+
+                         {% for result in results %}
+
+                          <tr>
+                            <td class="test-name">{{ result.number-show }}</td>                            
+                            <td class="test-name">{{ result.name }}</td>            
+                            <td>{{ result.number-pedigree }}</td>
+                            <td>{{ result.dob }}</td>
+                            <td>{{ result.titles }}</td>
+                            <td>{{ result.certificate }}</td>   
+                            <td>{{ result.judge }}</td>
+
+                          </tr>    
+
+                        {% endfor %}  <!-- type-->       
+
+                        {% endfor %}  <!-- type-->       
+
+                        {% endfor %}  <!-- type-->       
+                     {% endfor %}  <!-- type-->       
+
+                    </tbody>
+                  </table> 
+									</div>
+								</div>
+							</div>
+						</div>
+      {% endfor %}
+                  
+      {% endfor %}  <!-- breed-->   
+					</div>  
+
+ 
     </div>
   </div>
 </div>
