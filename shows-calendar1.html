@@ -2,7 +2,6 @@
 layout: default
 menu: shows-calendar
 ---
-<link rel="stylesheet" href="{{ site.url }}/assets/plugins/tablesorter-master/dist/css/theme.default.min.css">
 
 <div class="container content" >
   <div class="title-box-v2">
@@ -39,7 +38,7 @@ menu: shows-calendar
 	</table>     
       
       
-<table class="tablesorter">
+<table class="tablesorter" id="Mysorter">
   <thead>
           <tr>
             <th>Даты</th>                     
@@ -79,13 +78,14 @@ menu: shows-calendar
        {% endfor %}            
         </tbody>
       </table> 
-	    <script src="{{ site.url }}/assets/plugins/tablesorter-master/docs/js/jquery-1.2.6.min.js"></script>
-
-      <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.min.js"></script>
-
-      <!-- tablesorter widgets (optional) -->
-      <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script>
 
     </div>
   </div>
 </div>
+	<script>
+$(function(){
+  $("#Mysorter").tablesorter();
+});
+
+
+	</script>
