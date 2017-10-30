@@ -54,7 +54,7 @@ menu: members-clubs
         <h2>Список членов НКП - <span class="color-green">организаций</span></h2>
       </div> 
       <div class="table-responsive">                  
-      <table class="table table-striped">
+      <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
         <thead>
           <tr>
             <th>
@@ -71,20 +71,16 @@ menu: members-clubs
         <tbody>
           {% for cl in site.data.clubs %}
           <tr>
-            <td>  
-            <p><strong>
+            <td>
               {% if $cl.link%}
               <a href="{{ cl.link }}">{{ cl.club }}</a>
               {% else %}  
                 {{ cl.club }}
               {% endif %}  
-              </strong></p>
             </td>
-            <td>
-            <p><strong>{{ cl.city }}</strong></p>
+            <td>{{ cl.city }}
             </td> 
-            <td>
-            <p><strong>{{ cl.organizer }}</strong></p>
+            <td>{{ cl.organizer }}
             </td>                             
           </tr>    
        {% endfor %}            

@@ -32,7 +32,7 @@ menu: members
         <h2>Список членов НКП - <span class="color-green">физических лиц</span></h2>
       </div> 
         <div class="table-responsive">                  
-        <table class="table table-striped">
+          <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
           <thead>
             <tr>
               <th>
@@ -50,21 +50,16 @@ menu: members
             {% for mmb in site.data.members %}
             <tr>
               <td>
-              <p><strong>
                 {{ mmb.name }}                
-                </strong></p>
               </td>
-              <td>
-              <p><strong>{{ mmb.city }}</strong></p>
+              <td>{{ mmb.city }}
               </td>   
               <td>
-              <p><strong>
                   {% if $mmb.link %}
                     <a href="{{ mmb.link }}">{{ mmb.kennel }}</a>                
                   {% else %} 
                       {{ mmb.kennel }}
                   {% endif %}    
-                </strong></p>
               </td>                             
             </tr>    
          {% endfor %}            
