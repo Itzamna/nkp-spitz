@@ -2,6 +2,7 @@
 layout: default
 menu: shows-calendar
 ---
+
 <div class="container content" >
   <div class="title-box-v2">
     <h2>Календарь выставок<span class="color-green"> ранга ЧК, ПК, КЧК</span> на 2018 год, </h2>
@@ -10,8 +11,8 @@ menu: shows-calendar
 </div>
 <div class="container content  entry-content" >
   <div class="row">
-    <div class="col-md-12">   
-      <table class="table table-bordered table-calendar">
+    <div class="col-md-12">
+      <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
         <thead>
           <tr>
             <th>Даты</th>                     
@@ -50,8 +51,8 @@ menu: shows-calendar
           </tr>    
        {% endfor %}            
         </tbody>
-      </table>     
+      </table> 
+
     </div>
   </div>
 </div>
-

@@ -42,7 +42,7 @@
 	<link rel="stylesheet" href="http://localhost:4003/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="http://localhost:4003/assets/plugins/fancybox/source/jquery.fancybox.css">
 	<link rel="stylesheet" href="http://localhost:4003/assets/plugins/parallax-slider/css/parallax-slider.css">
-  <link rel="stylesheet" href="http://localhost:4003/assets/plugins/tablesorter-master/dist/css/theme.default.min.css">
+  <link rel="stylesheet" href="http://localhost:4003/assets/plugins/tablesorter-master/dist/css/theme.default_my.min.css">
 
 	<!-- CSS Theme -->
 	<link rel="stylesheet" href="http://localhost:4003/assets/css/theme-colors/blue.css" id="style_color">
@@ -260,8 +260,8 @@
 </div>
 <div class="container content  entry-content" >
   <div class="row">
-    <div class="col-md-12">   
-      <table class="table table-bordered table-calendar">
+    <div class="col-md-12">
+      <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
         <thead>
           <tr>
             <th>Даты</th>                     
@@ -2196,11 +2196,11 @@
           </tr>    
                    
         </tbody>
-      </table>     
+      </table> 
+
     </div>
   </div>
 </div>
-
 
     </div>
 	</div>
@@ -2248,7 +2248,13 @@
   });
   </script>  
       <script type="text/javascript" src="http://localhost:4003/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.min.js"></script>
-      <script type="text/javascript" src="http://localhost:4003/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script>  
+      <script type="text/javascript" src="http://localhost:4003/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script> 
+  	<script>
+	$(function(){
+		$('#Mysorter').tablesorter();
+	});
+
+	</script>
 	<!--[if lt IE 9]>
 	<script src="http://localhost:4003/assets/plugins/respond.js"></script>
 	<script src="http://localhost:4003/assets/plugins/html5shiv.js"></script>

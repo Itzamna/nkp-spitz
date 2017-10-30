@@ -88,7 +88,13 @@
   });
   </script>  
       <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.min.js"></script>
-      <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script>  
+      <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script> 
+  	<script>
+	$(function(){
+		$('#Mysorter').tablesorter();
+	});
+
+	</script>
 	<!--[if lt IE 9]>
 	<script src="{{ site.url }}/assets/plugins/respond.js"></script>
 	<script src="{{ site.url }}/assets/plugins/html5shiv.js"></script>
