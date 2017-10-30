@@ -2,27 +2,7 @@
 layout: default
 menu: shows-calendar
 ---
-	<script src="{{ site.url }}/assets/plugins/tablesorter-master/docs/js/jquery-1.2.6.min.js"></script>
-
 <link rel="stylesheet" href="{{ site.url }}/assets/plugins/tablesorter-master/dist/css/theme.default.min.css">
-<!-- load jQuery and tablesorter scripts 
-<script type="text/javascript" src="/path/to/jquery-latest.js"></script>-->
-
-<script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.min.js"></script>
-
-<!-- tablesorter widgets (optional) -->
-<script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script>
-	<script>
-	$(function(){
-		$('table').tablesorter({
-			widgets        : ['zebra', 'columns'],
-			usNumberFormat : false,
-			sortReset      : true,
-			sortRestart    : true
-		});
-	});
-	</script>
-
 
 <div class="container content" >
   <div class="title-box-v2">
@@ -59,7 +39,7 @@ menu: shows-calendar
 	</table>     
       
       
-<table class="tablesorter {sortlist: [[0,0],[4,0]]}">
+<table class="tablesorter">
   <thead>
           <tr>
             <th>Даты</th>                     
@@ -98,12 +78,14 @@ menu: shows-calendar
           </tr>    
        {% endfor %}            
         </tbody>
-      </table>     
+      </table> 
+	    <script src="{{ site.url }}/assets/plugins/tablesorter-master/docs/js/jquery-1.2.6.min.js"></script>
+
+      <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.min.js"></script>
+
+      <!-- tablesorter widgets (optional) -->
+      <script type="text/javascript" src="{{ site.url }}/assets/plugins/tablesorter-master/dist/js/jquery.tablesorter.widgets.min.js"></script>
+
     </div>
   </div>
 </div>
-<script>
-$(function(){
-  $("#myTable").tablesorter({ sortList: [[0,0], [1,0]] });
-});
-</script>
