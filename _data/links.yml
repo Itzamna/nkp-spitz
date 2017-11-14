@@ -31,7 +31,10 @@
     
   - alt: Статьи и литература
     url: literature   
-    
+
+- url: news
+  alt: Новости
+      
 - url: presidium
   alt: Президиум НКП
   
