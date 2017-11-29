@@ -13,7 +13,7 @@ menu: shows-result
       
       
       {% assign clubs = site.data.showresult | group_by:"club" %}
-      {% for count in (1..1) %}
+      {% for count in (1..2) %}
       {% for club in clubs %}
            {% assign show = club.items %}  
            {% assign info-show = show[0] %}  
