@@ -13,21 +13,20 @@ menu: shows-result
       
       
       {% assign clubs = site.data.showresult | group_by:"club" %}
-
+      {% for count in (1..1) %}
       {% for club in clubs %}
            {% assign show = club.items %}  
            {% assign info-show = show[0] %}  
            
-          <div class="panel-group acc-v1" id="accordion-{{count}}">
+          <div class="panel-group acc-v1" id="accordion-{{info-show.number-club-show}}">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{show.number-club-show}}" href="#collapse-{{show.number-club-show}}" aria-expanded="false">
-                     {{info-show.date}}. {{info-show.city}}. <span class="color-green">{{club.name}}</span>. Монопородная выставка "Немецкий шпиц" ранга {{info-show.rang}}.                               
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{info-show.number-club-show}}" href="#collapse-{{info-show.number-club-show}}" aria-expanded="false">{{info-show.date}}. {{info-show.city}}. <span class="color-green">{{club.name}}</span>. Монопородная выставка "Немецкий шпиц" ранга {{info-show.rang}}.
 									</a>
 								</h4>
 							</div>
-							<div id="collapse-{{count}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+							<div id="collapse-{{info-show.number-club-show}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 								<div class="panel-body">
                   <div class="table-responsive">                  
                   <table class="table table-bordered test-results">
@@ -110,6 +109,7 @@ menu: shows-result
 						</div>
       {% endfor %}
                   
+      {% endfor %}  <!-- breed-->   
 					</div>  
 
  
