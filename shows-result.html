@@ -13,7 +13,7 @@ menu: shows-result
       
       
       {% assign clubs = site.data.showresult | group_by:"club" %}
-      {% for count in (1..2) %}
+
       {% for club in clubs %}
            {% assign show = club.items %}  
            {% assign info-show = show[0] %}  
@@ -22,7 +22,7 @@ menu: shows-result
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{count}}" href="#collapse-{{count}}" aria-expanded="false">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{show.number-club-show}}" href="#collapse-{{show.number-club-show}}" aria-expanded="false">
                      {{info-show.date}}. {{info-show.city}}. <span class="color-green">{{club.name}}</span>. Монопородная выставка "Немецкий шпиц" ранга {{info-show.rang}}.                               
 									</a>
 								</h4>
@@ -110,7 +110,6 @@ menu: shows-result
 						</div>
       {% endfor %}
                   
-      {% endfor %}  <!-- breed-->   
 					</div>  
 
  
