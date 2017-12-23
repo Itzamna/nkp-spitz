@@ -93,7 +93,7 @@
     url: shows-result
     
 - url: blanks
-  alt: Бланки и формы
+  alt: Заявки, формы, запись
   submenu:
   - alt: Вступление в НКП (физические лица)
     url: membership-form-fiz
@@ -101,11 +101,16 @@
   - alt: Вступление в НКП (клубы)
     url: membership-form-club
     
+  - alt: Заявка на проведение монопородной выставки в 2019 году
+    url: blank-statement-show
+    
   - alt: Внесение данных о Чемпионах НКП
     url: champions-form 
     
   - alt: Внесение данных о протестированных собаках
-    url: tests-form     
+    url: tests-form  
     
+  - alt: Запись на ЧК-2018
+    url: nds  
 - url: contacts
   alt: Контакты
