@@ -56,7 +56,6 @@
 - url: champions
   alt: Чемпионы НКП
   submenu:
-  
   - alt: Померанские шпицы
     url: champions/pomeranian
 
@@ -87,12 +86,9 @@
   - alt: Вольфшпицы/кеесхонды
     url: champions/wolf
     
-   - alt: Внесение данных о Чемпионах НКП
+  - alt: Внесение данных о Чемпионах НКП
     url: champions-form  
-- url: shows
-  alt: Выставки НКП
-  submenu:
-
+    
 - url: tests/index
   alt: Тестирование собак
   submenu:
