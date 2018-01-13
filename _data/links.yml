@@ -46,10 +46,17 @@
 
   - alt: Физические лица
     url: members-fiz
-   
+    
+  - alt: Вступление в НКП (физические лица)
+    url: membership-form-fiz
+    
+  - alt: Вступление в НКП (клубы)
+    url: membership-form-club 
+    
 - url: champions
   alt: Чемпионы НКП
   submenu:
+  
   - alt: Померанские шпицы
     url: champions/pomeranian
 
@@ -80,8 +87,20 @@
   - alt: Вольфшпицы/кеесхонды
     url: champions/wolf
     
+   - alt: Внесение данных о Чемпионах НКП
+    url: champions-form  
+- url: shows
+  alt: Выставки НКП
+  submenu:
+
 - url: tests/index
-  alt: Результаты тестов
+  alt: Тестирование собак
+  submenu:
+  - url: tests/index
+    alt: Результаты тестов 
+    
+  - alt: Внесение данных о протестированных собаках
+    url: tests-form 
 
 - url: shows
   alt: Выставки НКП
@@ -92,25 +111,24 @@
   - alt: Результаты
     url: shows-result
     
-- url: blanks
-  alt: Заявки, формы, запись
-  submenu:
-  - alt: Вступление в НКП (физические лица)
-    url: membership-form-fiz
+  - alt: ЧК-2018
+    url: nds 
     
-  - alt: Вступление в НКП (клубы)
-    url: membership-form-club
+  - alt: Опрос о выставках
+    url: shows-opinions
     
   - alt: Заявка на проведение монопородной выставки в 2019 году
     url: blank-statement-show
     
-  - alt: Внесение данных о Чемпионах НКП
-    url: champions-form 
+- url: blanks
+  alt: Заявки, формы, запись
+  submenu:
+
     
-  - alt: Внесение данных о протестированных собаках
-    url: tests-form  
+   
+
     
-  - alt: Запись на ЧК-2018
-    url: nds  
+ 
+
 - url: contacts
   alt: Контакты
