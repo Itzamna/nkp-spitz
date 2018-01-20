@@ -284,3 +284,31 @@ table.table-calendar {
 table.table-calendar thead.table-info > th {
   background-color: #e8faff;
 }
+h3.catalog {
+  text-align:center;
+  font-size:1.8em;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin: 20px;
+}
+h4.catalog {
+  text-align:center;
+  font-size:1.4em;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin: 10px;
+}
+h5.catalog {
+  text-align:left;
+  font-size:1.1em;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-style:italic;
+  margin: 10px 0;
+}
+p.catalog {
+  font-size: 1em;
+}
+.catalog-class{
+  margin-bottom: 20px;
+}

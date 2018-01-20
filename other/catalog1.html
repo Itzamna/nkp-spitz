@@ -12,67 +12,42 @@ menu: champions-form
   <div class="row">
     <div class="col-md-12">     
       <p>Выставочное положение и т.п.</p>
-
-      
-     <div class="table-responsive">                  
-
-      <table class="table table-bordered test-results">
-        <col width="20%"><col width="12%"><col width="10%"><col width="35%"><col width="10%"><col width="13%">
-        <thead>
-          <tr>
-            <th>Кличка</th>         
-            <th>№ родословной</th>
-            <th>ДР</th>  
-            <th>Результат</th> 
-            <th>Дата теста</th>  
-            <th>ФИО врача</th>                  
-          </tr>
-        </thead>
-        <tbody>
-
-      {% assign breeds = site.data.catalog1 | group_by:"breed"| sort:"name" %}  
-          
+      <div style="display:none">{% increment counter %}</div>
+      {% assign breeds = site.data.catalog1 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
         {% for breed in breeds %}
-        {% assign code = breed[0] %}
-        {% assign teacher = t[1] %}
-        {% assign photo = t[2] %}
-        {% assign subject = t[3] %}
-        {% assign standing = t[4] %}
-        {% assign exp = t[5] %}
-        {% assign edu = t[6] %}
-        {% assign spec = t[7] %}
-        {% assign cat = t[8] %}
-        {% assign subjecten = t[9] %}
-        {% assign description = t[10] %}
-          {{ breed | inspect }}
-        {% assign types = breed.items | group_by:"type" %}
-          <tr>
-            <td class="breed-test" colspan="6">{{breed.name}}</td>                                    
-          </tr>           
-          {% for type in types %}
-              <tr>
-                <td class="type-test" colspan="6">{{type.name}}</td>                                    
-              </tr>            
-          {% assign results = type.items | sort:"result,name" %}
+        {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
+          <h3 class="catalog">Порода: {{breed.name}}<h3>           
+          {% for sex in types %}
+              <h4 class="catalog">
+                {% if sex.name == 'Кобель' %}Кобели{% endif %} 
+                {% if sex.name == 'Сука' %}Суки{% endif %} 
+              </h4>      
+       
+          {% assign classes = sex.items | group_by_exp:'classes', "classes['Класс']"| sort:"name" %}
+            {% for class in classes %}
+              <h5 class="catalog">Класс: {{class.name}}</h5>
 
+            {% assign results = class.items | sort:'Кличка' %}
+            <div class="catalog-class">
              {% for result in results %}
+            <p class="catalog"><b>{% increment counter %}.</b>
+              <span class="text-uppercase">{{ result['Кличка']}},</span>
+              <span class="text-uppercase">{{ result['Родословная №']}},</span>
+              <span class="catalog-db">{{ result['Дата рождения']}},</span>
+              <span class="text-capitalize">{{ result['Окрас']}},</span>
+              <span class="text-uppercase">О. {{ result['Отец (кличка)']}},</span>
+              <span class="text-uppercase">М. {{ result['Мать (кличка)']}},</span>
+              зав. <span class="text-capitalize">{{ result['Заводчик']}},</span>
+              вл. <span class="text-capitalize">{{ result['Владелец']}}.</span>
+            </p>    
 
-              <tr>
-                <td class="test-name">{{ result.name }}</td>            
-                <td>{{ result.pedigree }}</td>
-                <td>{{ result.dob }}</td>
-                <td>{{ result.result }}</td>
-                <td>{{ result.date }}</td>
-                <td>{{ result.doctor }}</td>                         
-              </tr>    
-             {% endfor %}   <!-- result-->    
-         {% endfor %}  <!-- type-->       
+             {% endfor %}   <!-- result-->   
+            </div>
+          {% endfor %}  <!-- class-->       
+         {% endfor %}  <!-- sex-->       
       {% endfor %}  <!-- breed-->    
-         
-        </tbody>
-      </table>
+
       </div>
-     </div>
   </div>
 </div>         
       
