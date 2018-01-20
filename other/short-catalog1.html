@@ -4,7 +4,7 @@ menu: champions-form
 ---
 <div class="container content" >
   <div class="title-box-v2">
-    <h2>Пробный каталог</h2>
+    <h2>Каталог для проверки</h2>
   </div>
 
 </div>
@@ -34,15 +34,8 @@ menu: champions-form
                 <div class="catalog-class">
                    {% for result in results %}
                     <p class="catalog"><b>{% increment counter %}.
-                      <span class="text-uppercase">{{ result['Кличка']}},</span></b>
                       <span class="text-uppercase">{{ result['Родословная №']}},</span>
-                      <span class="text-uppercase">{{ result['Клеймо/чип']}},</span>
-                      <span class="catalog-db">{{ result['Дата рождения']}},</span>
-                      <span class="text-capitalize">{{ result['Окрас']}},</span>
-                      <span class="text-uppercase">О. {{ result['Отец (кличка)']}},</span>
-                      <span class="text-uppercase">М. {{ result['Мать (кличка)']}},</span>
-                      зав. <span class="text-capitalize">{{ result['Заводчик']}},</span>
-                      вл. <span class="text-capitalize">{{ result['Владелец']}}.</span>
+                      <span class="text-uppercase">{{ result['Клеймо/чип']}}.</span>
                     </p>    
                    {% endfor %}   <!-- result-->   
                 </div>
