@@ -29,20 +29,7 @@ menu: champions-form
           </tr>
         </thead>
         <tbody>
-          {% for t in site.data.teachers %}
 
-        {% assign code = t[0] %}
-        {% assign teacher = t[1] %}
-        {% assign photo = t[2] %}
-        {% assign subject = t[3] %}
-        {% assign standing = t[4] %}
-        {% assign exp = t[5] %}
-        {% assign edu = t[6] %}
-        {% assign spec = t[7] %}
-        {% assign cat = t[8] %}
-        {% assign subjecten = t[9] %}
-        {% assign description = t[10] %}
-          
       {% assign breeds = site.data.catalog1 | group_by:"breed"| sort:"name" %}  
           
         {% for breed in breeds %}
@@ -57,7 +44,7 @@ menu: champions-form
         {% assign cat = t[8] %}
         {% assign subjecten = t[9] %}
         {% assign description = t[10] %}
-          
+          {{ breed | inspect }}
         {% assign types = breed.items | group_by:"type" %}
           <tr>
             <td class="breed-test" colspan="6">{{breed.name}}</td>                                    
