@@ -11,9 +11,8 @@ menu: champions-form
 <div class="container content  entry-content" >
   <div class="row">
     <div class="col-md-12">     
-      <p>НКП Немецкий шпиц рекомендует протестировать всех собак, участвующих в племенном разведении. При подборе пары поинтересуйтесь сертификатами генетических исследований партнера.</p>
-      <p>Мы принимаем результаты исследований суставов, пателлы, глаз, а также результаты различных ДНК-тестов.</p>
-      <p>Для подачи информации о протестированных собаках просьба <a href="{{ site.url }}/tests-form.html">заполнить форму</a>.</p>
+      <p>Выставочное положение и т.п.</p>
+
       
      <div class="table-responsive">                  
 
@@ -30,9 +29,35 @@ menu: champions-form
           </tr>
         </thead>
         <tbody>
-      {% assign breeds = site.data.tests | group_by:"breed"| sort:"name" %}     
-        {% for breed in breeds %}
+          {% for t in site.data.teachers %}
 
+        {% assign code = t[0] %}
+        {% assign teacher = t[1] %}
+        {% assign photo = t[2] %}
+        {% assign subject = t[3] %}
+        {% assign standing = t[4] %}
+        {% assign exp = t[5] %}
+        {% assign edu = t[6] %}
+        {% assign spec = t[7] %}
+        {% assign cat = t[8] %}
+        {% assign subjecten = t[9] %}
+        {% assign description = t[10] %}
+          
+      {% assign breeds = site.data.catalog1 | group_by:"breed"| sort:"name" %}  
+          
+        {% for breed in breeds %}
+        {% assign code = breed[0] %}
+        {% assign teacher = t[1] %}
+        {% assign photo = t[2] %}
+        {% assign subject = t[3] %}
+        {% assign standing = t[4] %}
+        {% assign exp = t[5] %}
+        {% assign edu = t[6] %}
+        {% assign spec = t[7] %}
+        {% assign cat = t[8] %}
+        {% assign subjecten = t[9] %}
+        {% assign description = t[10] %}
+          
         {% assign types = breed.items | group_by:"type" %}
           <tr>
             <td class="breed-test" colspan="6">{{breed.name}}</td>                                    
