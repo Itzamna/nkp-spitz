@@ -11,7 +11,7 @@ menu: champions-form
 <div class="container content  entry-content" >
   <div class="row">
     <div class="col-md-12">     
-      <div style="display:none">{% increment counter %}</div>
+      <div style="display:none">{% increment counter2 %}</div>
       {% assign breeds = site.data.catalog1 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
         {% for breed in breeds %}
         {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
@@ -30,7 +30,7 @@ menu: champions-form
                       <div class="diplom-text">Кличка: {{ result['Кличка']}}</div>
                       <div class="diplom-text">Пол: {{sex.name}}</div>
                       <div class="diplom-text">Класс: {{class.name}}</div>
-                      <div class="diplom-text">Номер по каталогу: {% increment counter %}</div>                    
+                      <div class="diplom-text">Номер по каталогу: {% increment counter2 %}</div>                    
                       <div class="diplom-text">Родословная: {{ result['Родословная №']}}</div>
                       <div class="diplom-text">Владелец: {{ result['Владелец']}}</div>
                     </div>   

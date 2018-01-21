@@ -12,7 +12,7 @@ menu: champions-form
   <div class="row">
     <div class="col-md-12">     
       <p>Выставочное положение и т.п.</p>
-      <div style="display:none">{% increment counter %}</div>
+      <div style="display:none">{% increment counter1 %}</div>
       {% assign breeds = site.data.catalog1 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
         {% for breed in breeds %}
         {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
@@ -33,7 +33,7 @@ menu: champions-form
                 {% assign results = class.items | sort:'Кличка' %}
                 <div class="catalog-class">
                    {% for result in results %}
-                    <p class="catalog"><b>{% increment counter %}.
+                    <p class="catalog"><b>{% increment counter1 %}.
                       <span class="text-uppercase">{{ result['Родословная №']}},</span>
                       <span class="text-uppercase">{{ result['Клеймо/чип']}}.</span>
                     </p>    
