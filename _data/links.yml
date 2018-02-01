@@ -7,12 +7,14 @@
   - alt: Устав НКП
     url: docs-ustav
 
-  - alt: Положение о монопородных выставках
+  - alt: Выставочное положение
     url: docs-vp
     
-  - alt: Правила присвоения титулов
+  - alt: О титулах
     url: docs-titles
-
+    
+  - alt: Для информации
+    url: docs-info
     
 - url: breed
   alt: О породе
@@ -107,13 +109,13 @@
   - alt: Результаты
     url: shows-result
     
-  - alt: ЧК-2018
+  - alt: Националка 25-03-2018
     url: nds 
     
   - alt: Опрос о выставках
     url: shows-opinions
     
-  - alt: Заявка на проведение монопородной выставки в 2019 году
+  - alt: Заявка на моно-2019
     url: blank-statement-show
     
 - url: contacts
