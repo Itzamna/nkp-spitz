@@ -1308,7 +1308,7 @@ i.icon-custom {
 	border: solid 1px #555;
 }
 
-i.icon-sm {
+.menu-container i.icon-sm {
  width: 35px;
  height: 35px;
  font-size: 16px;
