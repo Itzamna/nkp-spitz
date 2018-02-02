@@ -1,23 +1,10 @@
 - url: index
   alt: Главная
+  ico: fa-home
   
-- url: docs
-  alt: Документы
-  submenu:
-  - alt: Устав НКП
-    url: docs-ustav
-
-  - alt: Выставочное положение
-    url: docs-vp
-    
-  - alt: О титулах
-    url: docs-titles
-    
-  - alt: Для информации
-    url: docs-info
-    
 - url: breed
   alt: О породе
+  ico: fa-certificate
   submenu:
   - alt: Стандарт породы
     url: breed-standart
@@ -32,16 +19,50 @@
     url: breed-docs-vdh
     
   - alt: Статьи и литература
-    url: literature   
+    url: literature 
+    
+- url: docs
+  alt: Документы
+  ico: fa-file-text-o
+  submenu:
+  - alt: Устав НКП
+    url: docs-ustav
 
-- url: news
-  alt: Новости
-      
+  - alt: Выставочное положение
+    url: docs-vp
+    
+  - alt: О титулах
+    url: docs-titles
+    
+  - alt: Для информации
+    url: docs-info
+    
+- url: shows
+  alt: Выставки НКП
+  ico: fa-calendar
+  submenu:
+  - alt: Календарь выставок
+    url: shows-calendar
+
+  - alt: Результаты выставок
+    url: shows-result
+    
+  - alt: Националка 25-03-2018
+    url: nds 
+       
+  - alt: Заявка на моно-2019
+    url: blank-statement-show  
+    
+  - alt: Опрос о выставках
+    url: shows-opinions 
+    
 - url: presidium
   alt: Президиум НКП
-  
+  ico: fa-address-card
+    
 - url: members
   alt: Члены НКП
+  ico: fa-user
   submenu:
   - alt: Клубы
     url: members-clubs
@@ -53,46 +74,23 @@
     url: membership-form-fiz
     
   - alt: Вступление в НКП (клубы)
-    url: membership-form-club 
-    
+    url: membership-form-club  
+
 - url: champions
   alt: Чемпионы НКП
+  ico: fa-star
   submenu:
-  - alt: Померанские шпицы
-    url: champions/pomeranian
+  - alt: Список чемпионов НКП
+    url: champions
 
-  - alt: Малые шпицы (оранж, сер. и др. окрасы)
-    url: champions/klein-orange
-    
-  - alt: Малые шпицы (белый окрас)
-    url: champions/klein-white
-    
-  - alt: Малые шпицы (чер. и кор. окрасы)
-    url: champions/klein-black
-    
-  - alt: Средние шпицы (оранж, сер. и др. окрасы)
-    url: champions/mittle-orange
-    
-  - alt: Средние шпицы (белый окрас)
-    url: champions/mittle-white
-    
-  - alt: Средние шпицы (чер. и кор. окрасы)
-    url: champions/mittle-black
-
-  - alt: Большие шпицы (белый окрас)
-    url: champions/gross-white
-    
-  - alt: Большие шпицы (чер. и кор. окрасы)
-    url: champions/gross-black
-        
-  - alt: Вольфшпицы/кеесхонды
-    url: champions/wolf
-    
-  - alt: Внесение данных о Чемпионах НКП
+  - alt: Внесение данных
     url: champions-form  
-    
+
+
+
 - url: tests/index
   alt: Тестирование собак
+  ico: fa-heartbeat
   submenu:
   - url: tests/index
     alt: Результаты тестов 
@@ -100,23 +98,11 @@
   - alt: Внесение данных о протестированных собаках
     url: tests-form 
 
-- url: shows
-  alt: Выставки НКП
-  submenu:
-  - alt: Календарь
-    url: shows-calendar
 
-  - alt: Результаты
-    url: shows-result
-    
-  - alt: Националка 25-03-2018
-    url: nds 
-    
-  - alt: Опрос о выставках
-    url: shows-opinions
-    
-  - alt: Заявка на моно-2019
-    url: blank-statement-show
-    
+- url: news
+  alt: Новости
+  ico:  fa-list
+  
 - url: contacts
   alt: Контакты
+  ico: fa-envelope

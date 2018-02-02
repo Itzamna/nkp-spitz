@@ -4,13 +4,105 @@ menu: champions
 ---
 <div class="container content" >
   <div class="title-box-v2">
-    <h2>Чемпионы <span class="color-green">НКП</span></h2>
+    <h2>Список <span class="color-green">Чемпионов НКП</span></h2>
   </div>
 </div>
 <div class="container content  entry-content" >
   <div class="row">
-    <div class="col-md-12">
-      <p>Приносим извинения, сайт находится в стадии разработки.</p>
+    <div class="col-md-12">    
+      
+      
+      {% assign years = site.data.champions | group_by_exp:'year', "year['year']"| sort:"name" | reverse %}
+      {% for year in years %}
+           {% assign breeds = year.items %}      
+
+          <div class="panel-group acc-v1" id="accordion-{{year.name}}">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{year.name}}" href="#collapse-{{year.name}}" aria-expanded="false"> <span class="color-green"><i class="fa fa-star"></i> {{year.name}}</span> 
+									</a>
+								</h4>
+							</div>
+							<div id="collapse-{{year.name}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+                  <div class="table-responsive">                  
+                  <table class="table table-bordered test-results">
+                    <col width="7%"><col width="20%"><col width="7%"><col width="8%"><col width="30%"><col width="10%"><col width="10%">
+                    <thead>
+                      <tr>
+                        <th>Фото</th>         
+                        <th>Кличка</th>         
+                        <th>№ родословной</th>
+                        <th>Дата рождения</th>  
+                        <th>Родители</th> 
+                        <th>Заводчик</th>  
+                        <th>Владелец</th>                  
+                      </tr>
+                    </thead>
+                    <tbody>      
+                    {% assign breeds = year.items | group_by_exp:'breed', "breed['breed']"| sort:"name"%}
+
+                      {% for breed in breeds %}
+                          <tr>
+                            <td class="breed-test" colspan="7"> {{breed.name}}</td>                                    
+                          </tr>       
+
+                      {% assign types = breed.items | group_by:"type"%}
+
+                         {% for type in types %}          
+                          <tr>
+                            <td class="type-test" colspan="7">
+                              {% if type.name == 'Юный Чемпион НКП' %}Юные Чемпионы НКП{% endif %}
+                              {% if type.name == 'Чемпион НКП' %}Чемпионы НКП{% endif %}
+                            </td>                                    
+                          </tr>
+                       {% assign sexes = type.items | group_by:"sex" %}
+
+                         {% for sex in sexes %}          
+                          <tr>
+                            <td class="class-test" colspan="7">
+                              {% if sex.name=="Кобель" %}Кобели{% endif %}  
+                              {% if sex.name=="Сука" %}Суки{% endif %}  
+                            </td>                                    
+                          </tr>    
+                      
+<a href="assets/img/main/img12.jpg" rel="gallery" class="fancybox img-hover-v1" title="Image 1">
+						<span><img class="img-responsive" src="assets/img/main/img12.jpg" alt=""></span>
+					</a>
+                      {% assign dogs = sex.items %}
+                         {% for dog in dogs %}
+
+                          <tr>
+                            <td><a href="{{ dog.photo }}" class="fancybox img-hover-v1" title="{{ dog.Name }}"><span><img class="img-responsive" src="{{ dog.photo }}" alt="Фото {{ dog.Name }}"></span></a></td>
+                            <td class="test-name"><b>{{ dog.Name }}</b></td>            
+                            <td>{{ dog.pedigree }}</td>
+                            <td>{{ dog.dob | date: "%d-%m-%Y"}}</td>
+                            <td>{{ dog.father }} х {{ dog.mother }}</td>
+                            <td>{{ dog.breeder }}</td>   
+                            <td>{{ dog.owner }}</td>
+
+                          </tr>    
+
+                        {% endfor %}  <!-- type-->       
+
+                        {% endfor %}  <!-- type-->       
+
+                        {% endfor %}  <!-- type-->       
+                     {% endfor %}  <!-- type-->       
+
+                    </tbody>
+                  </table> 
+                  </div>  
+									</div>
+								</div>
+							</div>
+						</div>
+                  
+      {% endfor %}  <!-- breed-->   
+					</div>  
+
+ 
     </div>
   </div>
 </div>
