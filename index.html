@@ -14,14 +14,9 @@ menu: index
     </div>    
   </div>
 </div>
-<center>
-<div class="owl-clients-v6 center-block">
-  {% for i in (1..5) %}
-      <img src="{{ site.url }}/assets/img/slide/{{ i }}.jpg">
-  {% endfor %}
-</div>
-</center>
-<div class="container content  entry-content" >
+
+
+<div class="container content  entry-content margin-bottom-10" >
   <div class="row">
     <div class="col-md-12">
       <div class="title-box-v2">
@@ -34,13 +29,17 @@ menu: index
     </div>
   </div>
 </div>
-<center>
-<div class="owl-clients-v6 center-block">
-  {% for i in (6..10) %}
-      <img src="{{ site.url }}/assets/img/slide/{{ i }}.jpg">
+
+<div class="owl-carousel-style-v2 margin-bottom-10">
+  <div class="owl-slider-v3">
+  {% for i in (1..27) %}
+    <div class="item" >
+      <img class="img-responsive" src="{{ site.url }}/assets/img/slide/new/{{ i }}.jpg">
+    </div>
   {% endfor %}
+  </div>
 </div>
-</center>
+
 <div class="container content" >  
   <div class="row">
     <div class="title-box-v2">

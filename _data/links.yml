@@ -34,7 +34,7 @@
   - alt: О титулах
     url: docs-titles
     
-  - alt: Для информации
+  - alt: Бланки и памятки
     url: docs-info
     
 - url: shows
@@ -69,12 +69,12 @@
 
   - alt: Физические лица
     url: members-fiz
-    
+        
+  - alt: Вступление в НКП (клубы)
+    url: membership-form-club 
+
   - alt: Вступление в НКП (физические лица)
     url: membership-form-fiz
-    
-  - alt: Вступление в НКП (клубы)
-    url: membership-form-club  
 
 - url: champions
   alt: Чемпионы НКП
@@ -84,9 +84,10 @@
     url: champions
 
   - alt: Внесение данных
-    url: champions-form  
-
-
+    url: champions-form 
+    
+  - alt: Заявление на присвоение титула
+    url: champions-entry
 
 - url: tests/index
   alt: Тестирование собак
