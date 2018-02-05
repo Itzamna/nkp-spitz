@@ -74,7 +74,7 @@ menu: champions
                          {% for dog in dogs %}
 
                           <tr>
-                            <td><a href="{{ dog.photo }}" class="fancybox img-hover-v1" title="{{ dog.Name }}"><span><img class="img-responsive" src="{{ dog.photo }}" alt="Фото {{ dog.Name }}"></span></a></td>
+                            <td>{% if dog.photo == empty %} {%else%}<a href="{{ dog.photo }}" class="fancybox img-hover-v1" title="{{ dog.Name }}"><span><img class="img-responsive" src="{{ dog.photo }}" alt="Фото {{ dog.Name }}"></span></a>{% endif %}</td>
                             <td class="test-name"><b>{{ dog.Name }}</b></td>            
                             <td>{{ dog.pedigree }}</td>
                             <td>{{ dog.dob | date: "%d-%m-%Y"}}</td>
