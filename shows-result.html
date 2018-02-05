@@ -24,7 +24,7 @@ menu: shows-result
 								<h4 class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{info-show.number-club-show}}" href="#collapse-{{info-show.number-club-show}}" aria-expanded="false">{{info-show.date}}. {{info-show.city}}. <span class="color-green">{{club.name}}</span>. Монопородная выставка "Немецкий шпиц" ранга {{info-show.rang}}. 
 									</a>
-                  {% if info-show.photo %} <a href="{{ info-show.photo }}" target="_blank"> Фотоотчет с выставки</a> {% endif %} 
+                  {% if info-show.photo %} <a href="{{ info-show.photo }}" target="_blank"><i class="fa fa-picture-o"></i> Фотоотчет с выставки</a> {% endif %} 
 								</h4>
 							</div>
 							<div id="collapse-{{info-show.number-club-show}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -64,16 +64,16 @@ menu: shows-result
 
                          {% for class in classes %}          
                           <tr>
-                            <td class="class-test" colspan="7">Класс: 
-                              {% if class.name=="Б" %}Беби{% endif %}  
-                              {% if class.name=="Щ" %}Щенков{% endif %}  
-                              {% if class.name=="ЮН" %}Юниоров{% endif %}  
-                              {% if class.name=="ОТК" %}Открытый{% endif %}  
-                              {% if class.name=="ПРМ" %}Промежуточный{% endif %}  
-                              {% if class.name=="ЧЕМ" %}Чемпионов{% endif %}  
-                              {% if class.name=="ПОБНКП" %}Победителей НКП{% endif %}  
-                              {% if class.name=="ЧЕМНКП" %}Чемпионов НКП{% endif %}  
-                              {% if class.name=="ВЕТ" %}Ветеранов{% endif %}  
+                            <td class="class-test" colspan="7">
+                              {% if class.name=="Б" %}Класс: Беби{% endif %}  
+                              {% if class.name=="Щ" %}Класс: Щенков{% endif %}  
+                              {% if class.name=="ЮН" %}Класс: Юниоров{% endif %}  
+                              {% if class.name=="ОТК" %}Класс: Открытый{% endif %}  
+                              {% if class.name=="ПРМ" %}Класс: Промежуточный{% endif %}  
+                              {% if class.name=="ЧЕМ" %}Класс: Чемпионов{% endif %}  
+                              {% if class.name=="ПОБНКП" %}Класс: Победителей НКП{% endif %}  
+                              {% if class.name=="ЧЕМНКП" %}Класс: Чемпионов НКП{% endif %}  
+                              {% if class.name=="ВЕТ" %}Класс: Ветеранов{% endif %}  
 
 
                             </td>                                    
