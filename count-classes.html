@@ -1,0 +1,39 @@
+---
+layout: default
+menu: champions-form  
+---
+<div class="container content" >
+  <div class="title-box-v2">
+    <h2>Чемпионат породы-2018</h2>
+    <h3>Количество собак по классам по состоянию на 10.03.2018</h3>
+  </div>
+</div>
+<div class="container content  entry-content" >
+  <div class="row">
+    <div class="col-md-12">     
+      {% assign breeds = site.data.catalog1 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
+        {% for breed in breeds %}
+        {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
+          <h4 class="catalog">Порода: {{breed.name}}</h4>           
+          {% for sex in types %}
+              <h5 class="catalog">
+                {% if sex.name == 'Кобель' %}Кобели{% endif %} 
+                {% if sex.name == 'Сука' %}Суки{% endif %} 
+              </h5>      
+       
+          {% assign classes = sex.items | group_by_exp:'classes', "classes['Класс']" %}
+          {% assign classorders = 'Бэби, Щенков, Юниоров, Промежуточный, Открытый, Победителей, Чемпионов, Чемпионов НКП, Ветеранов' | split: ', ' %}
+            {% for tclass in classorders %}
+              {% for class in classes %}
+                {% if class.name == tclass %}
+            <p>{{class.name}}: <b>{{ class.items | size }}</b></p>
+                {% endif %} 
+              {% endfor %}  <!-- class-->       
+          {% endfor %}  <!-- classorders-->       
+         {% endfor %}  <!-- sex-->       
+      {% endfor %}  <!-- breed-->    
+      </div>
+  </div>
+</div>         
+      
+  
