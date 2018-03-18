@@ -11,31 +11,24 @@ menu: champions-form
 .diplom-text{
   font-size:14px;
   }
-.diplom-all{
-  width:100%;
-  display: table;
-  //height:421px; 
-}
-.parent{
-  width:50%;
-  //height:421px; 
-  display: inline-block;
+.diplom-class{
+  width:421px;
+  display: block;
+  height:718px;
   position:relative;
-  vertical-align:top;
-  display:table-cell;
-  }
-.child{
-  margin:  auto 25%;
+  
+}
 
-  position: absolute;
-  bottom:0;
-  display:block;
-  //width:595px;
-  //height:221px; 
-  }  
+.diplom-print{
+  margin-left:50px;
+  bottom:-50px;
+  position:absolute;
+  width:421px;
+  height:300px;
+  line-height:1.5;
+ }  
 </style>
 <div style="display:none">{% increment counter2 %}</div>
-<div class="diplom-all" >
 
 {% assign breeds = site.data.catalog35 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
   {% for breed in breeds %}
@@ -48,25 +41,23 @@ menu: champions-form
           {% if class.name == tclass %}               
           {% assign results = class.items | sort:'Кличка' %}
              {% for result in results %}
-                <div class="diplom-class parent" >
-                  <div class="diplom-print child">          
+            <div style="page-break-before:after;">
+                <div class="diplom-class " >
+                  <div class="diplom-print ">      
                       <div class="diplom-text"><span class="marker">Порода:</span> {{breed.name}}</div>
                         <div class="diplom-text"><span class="marker">Кличка:</span> <span class="text-uppercase">{{ result['Кличка']}}</span></div>
                         <div class="diplom-text"><span class="marker">Класс:</span> {{class.name}}</div>
                         <div class="diplom-text"><span class="marker">№ по каталогу:</span> {% increment counter2 %}</div>                    
                         <div class="diplom-text"><span class="marker">Владелец:</span> {{ result['Владелец']}}</div>
-                        <br><br>
+                        <br>
                         <div class="diplom-text"><span class="marker">Оценка:</span> </div>
                         <div class="diplom-text"><span class="marker">Титул:</span> </div>
                         <div class="diplom-text"><span class="marker">Эксперт:</span>
-                        {% if breed.name contains "Цвергшпиц" %}    
-                          Mrs. Lynn Lythgoe (Англия)
-                        {% else %} 
-                          Mrs. Jean Sharp-Bale (Англия)
-                        {% endif %} 
-                      </div>
-                    </div>   
+                        {% if breed.name contains "Цвергшпиц" %}Mrs. Lynn Lythgoe (Англия){% else %}Mrs. Jean Sharp-Bale (Англия){% endif %} </div>
+                  </div>  
+                  
                 </div>
+            </div>
              {% endfor %}   <!-- result-->  
         
       {% endif %} 
@@ -75,7 +66,6 @@ menu: champions-form
    {% endfor %}  <!-- sex-->       
 {% endfor %}  <!-- breed-->    
 
-</div>
 
       
   
