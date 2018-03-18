@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /other/
+Disallow: /other4343/

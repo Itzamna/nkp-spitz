@@ -4,16 +4,17 @@ menu: champions-form
 ---
 <div class="container content" >
   <div class="title-box-v2">
-    <h2>Пробный каталог</h2>
+    <h2>Монопородная выставка ранга ЧК "НЕМЕЦКИЙ ШПИЦ"</h2>
+    <p>г. Москва. 25.03.2018 г.</p>
   </div>
 
 </div>
 <div class="container content  entry-content" >
-  <div class="row">
+  <div class="row" style="width:900px;margin:20px;">
     <div class="col-md-12">     
       <p>Выставочное положение и т.п.</p>
       <div style="display:none">{% increment counter %}</div>
-      {% assign breeds = site.data.catalog1 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
+      {% assign breeds = site.data.catalog35 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
         {% for breed in breeds %}
         {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
           <h3 class="catalog">Порода: {{breed.name}}<h3>           
@@ -24,7 +25,7 @@ menu: champions-form
               </h4>      
        
           {% assign classes = sex.items | group_by_exp:'classes', "classes['Класс']" %}
-          {% assign classorders = 'Беби, Щенки, Юниоров, Промежуточный, Открытый, Победителей НКП, Чемпионов, Чемпионов НКП, Ветеранов' | split: ', ' %}
+          {% assign classorders = 'Бэби, Щенков, Юниоров, Промежуточный, Открытый, Победителей, Чемпионов, Чемпионов НКП, Ветеранов' | split: ', ' %}
             {% for tclass in classorders %}
               {% for class in classes %}
                 {% if class.name == tclass %}
@@ -34,20 +35,19 @@ menu: champions-form
                 <div class="catalog-class">
                    {% for result in results %}
                     <p class="catalog"><b>{% increment counter %}.
-                      <span class="text-uppercase">{{ result['Кличка']}},</span></b>
-                      <span class="text-uppercase">{{ result['Родословная №']}},</span>
+                      <span class="text-uppercase">{{ result['Кличка']}},</span></b> <span class="text-uppercase">{{ result['Родословная №']}},</span>
                       <span class="text-uppercase">{{ result['Клеймо/чип']}},</span>
                       <span class="catalog-db">{{ result['Дата рождения']}},</span>
-                      <span class="text-capitalize">{{ result['Окрас']}},</span>
+                      <span class="text-capitalize">{{ result['Окрас']}},</span><br>
                       <span class="text-uppercase">О. {{ result['Отец (кличка)']}},</span>
                       <span class="text-uppercase">М. {{ result['Мать (кличка)']}},</span>
                       зав. <span class="text-capitalize">{{ result['Заводчик']}},</span>
                       вл. <span class="text-capitalize">{{ result['Владелец']}}.</span>
-                    </p>    
-                   {% endfor %}   <!-- result-->   
+                    </p>   
+                   {% endfor %}<Br>   <!-- result-->   
                 </div>
             {% endif %} 
-              {% endfor %}  <!-- class-->       
+              {% endfor %} <!-- class-->       
           {% endfor %}  <!-- classorders-->       
          {% endfor %}  <!-- sex-->       
       {% endfor %}  <!-- breed-->    
