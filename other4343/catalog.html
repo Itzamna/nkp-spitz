@@ -17,7 +17,7 @@ menu: champions-form
       {% assign breeds = site.data.catalogfull | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
         {% for breed in breeds %}
         {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
-          <h3 class="catalog">Порода: {{breed.name}}<h3>           
+          <h3 class="catalog">{{breed.name}}<h3>           
           {% for sex in types %}
               <h4 class="catalog">
                 {% if sex.name == 'Кобель' %}Кобели{% endif %} 
@@ -38,9 +38,9 @@ menu: champions-form
                       <span class="text-uppercase">{{ result['Кличка']}},</span></b> <span class="text-uppercase">{{ result['Родословная №']}},</span>
                       <span class="text-uppercase">{{ result['Клеймо/чип']}},</span>
                       <span class="catalog-db">{{ result['Дата рождения']}},</span>
-                      <span class="text-capitalize">{{ result['Окрас']}},</span>
+                      <span class="text-capitalize">{{ result['Окрас']}},</span><br>
                       <span class="text-uppercase">О. {{ result['Отец (кличка)']}},</span>
-                      <span class="text-uppercase">М. {{ result['Мать (кличка)']}},</span>
+                      <span class="text-uppercase">М. {{ result['Мать (кличка)']}},</span><br>
                       зав. <span class="text-capitalize">{{ result['Заводчик']}},</span>
                       вл. <span class="text-capitalize">{{ result['Владелец']}}</span>
                     </p>   

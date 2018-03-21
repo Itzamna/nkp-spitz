@@ -301,12 +301,13 @@ h4.catalog {
 }
 h5.catalog {
   text-align:left;
-  font-size:1.2em;
-//  text-transform:uppercase;
-  text-decoration:underline;
+  font-size:1.3em;
+  text-transform:uppercase;
+ // text-decoration:underline;
   
-  font-style:italic;
+  //font-style:italic;
   margin: 10px 0;
+  //letter-spacing:1px;
   
 }
 p.catalog {
