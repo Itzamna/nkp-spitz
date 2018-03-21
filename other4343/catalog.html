@@ -14,7 +14,7 @@ menu: champions-form
     <div class="col-md-12">     
       <p>Выставочное положение и т.п.</p>
       <div style="display:none">{% increment counter %}</div>
-      {% assign breeds = site.data.catalog35 | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
+      {% assign breeds = site.data.catalogfull | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
         {% for breed in breeds %}
         {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
           <h3 class="catalog">Порода: {{breed.name}}<h3>           
@@ -38,11 +38,11 @@ menu: champions-form
                       <span class="text-uppercase">{{ result['Кличка']}},</span></b> <span class="text-uppercase">{{ result['Родословная №']}},</span>
                       <span class="text-uppercase">{{ result['Клеймо/чип']}},</span>
                       <span class="catalog-db">{{ result['Дата рождения']}},</span>
-                      <span class="text-capitalize">{{ result['Окрас']}},</span><br>
+                      <span class="text-capitalize">{{ result['Окрас']}},</span>
                       <span class="text-uppercase">О. {{ result['Отец (кличка)']}},</span>
                       <span class="text-uppercase">М. {{ result['Мать (кличка)']}},</span>
                       зав. <span class="text-capitalize">{{ result['Заводчик']}},</span>
-                      вл. <span class="text-capitalize">{{ result['Владелец']}}.</span>
+                      вл. <span class="text-capitalize">{{ result['Владелец']}}</span>
                     </p>   
                    {% endfor %}<Br>   <!-- result-->   
                 </div>
