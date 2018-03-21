@@ -43,7 +43,7 @@ menu: champions-form
              {% for result in results %}
                 <div class="diplom-class " >
                   <div class="diplom-print ">  
-                      <div class="diplom-text"><span class="marker">Порода:</span> {{breed.name}}</div>
+                      <div class="diplom-text"><span class="marker">Порода:</span> Немецкий <span class="text-lowercase">{{breed.name}}</span></div>
                         <div class="diplom-text"><span class="marker">Кличка:</span> <span class="text-uppercase">{{ result['Кличка']}}</span></div>
                         <div class="diplom-text"><span class="marker">Класс:</span> {{class.name}}</div>
                         <div class="diplom-text"><span class="marker">№ по каталогу:</span> {% increment counter2 %}</div>                    
