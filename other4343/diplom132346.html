@@ -43,7 +43,8 @@ menu: champions-form
              {% for result in results %}
             <div style="page-break-before:after;">
                 <div class="diplom-class " >
-                  <div class="diplom-print ">      
+                  <div class="diplom-print ">  
+                    <p>
                       <div class="diplom-text"><span class="marker">Порода:</span> {{breed.name}}</div>
                         <div class="diplom-text"><span class="marker">Кличка:</span> <span class="text-uppercase">{{ result['Кличка']}}</span></div>
                         <div class="diplom-text"><span class="marker">Класс:</span> {{class.name}}</div>
@@ -54,6 +55,7 @@ menu: champions-form
                         <div class="diplom-text"><span class="marker">Титул:</span> </div>
                         <div class="diplom-text"><span class="marker">Эксперт:</span>
                         {% if breed.name contains "Цвергшпиц" %}Mrs. Lynn Lythgoe (Англия){% else %}Mrs. Jean Sharp-Bale (Англия){% endif %} </div>
+                    </p>
                   </div>  
                   
                 </div>
