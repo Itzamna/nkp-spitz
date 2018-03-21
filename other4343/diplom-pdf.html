@@ -1,0 +1,70 @@
+---
+layout: empty1
+menu: champions-form  
+---
+<style>
+.marker {
+  font-weight: bold;
+  font-size: 16px;
+  padding-right: 18px;
+}
+.diplom-text{
+  font-size:14px;
+  }
+.diplom-class{
+  width:421px;
+  display: block;
+  height:793px;
+  position:relative;
+  
+}
+
+.diplom-print{
+  margin-left:50px;
+  bottom:-50px;
+  position:absolute;
+  width:421px;
+  height:350px;
+  line-height:1.8;
+ }  
+</style>
+<div style="display:none">{% increment counter2 %}</div>
+
+{% assign breeds = site.data.catalogfull | group_by_exp:'breed', "breed['Порода']"| sort:"name" %}  
+  {% for breed in breeds %}
+  {% assign types = breed.items | group_by_exp:'types', "types['Пол']" %}
+    {% for sex in types %} 
+    {% assign classes = sex.items | group_by_exp:'classes', "classes['Класс']" %}
+    {% assign classorders = 'Бэби, Щенков, Юниоров, Промежуточный, Открытый, Победителей, Чемпионов, Чемпионов НКП, Ветеранов' | split: ', ' %}
+      {% for tclass in classorders %}
+        {% for class in classes %}
+          {% if class.name == tclass %}               
+          {% assign results = class.items | sort:'Кличка' %}
+             {% for result in results %}
+                <div class="diplom-class " >
+                  <div class="diplom-print ">  
+                      <div class="diplom-text"><span class="marker">Порода:</span> {{breed.name}}</div>
+                        <div class="diplom-text"><span class="marker">Кличка:</span> <span class="text-uppercase">{{ result['Кличка']}}</span></div>
+                        <div class="diplom-text"><span class="marker">Класс:</span> {{class.name}}</div>
+                        <div class="diplom-text"><span class="marker">№ по каталогу:</span> {% increment counter2 %}</div>                    
+                        <div class="diplom-text"><span class="marker">Владелец:</span> {{ result['Владелец']}}</div>
+                        <br>
+                        <div class="diplom-text"><span class="marker">Оценка:</span><small>&nbsp;&nbsp;&nbsp;&nbsp;ОТЛИЧНО&nbsp;&nbsp;&nbsp;&nbsp;ОЧ.ХОРОШО&nbsp;&nbsp;&nbsp;&nbsp;ХОРОШО&nbsp;&nbsp;&nbsp;&nbsp;УДОВЛ.</small></div>
+                        <div class="diplom-text"><span class="marker">Титул:</span> </div>
+                        <div class="diplom-text"><span class="marker">Эксперт:</span>
+                        {% if breed.name contains "Цвергшпиц" %}Mrs. Lynn Lythgoe (Англия){% else %}Mrs. Jean Sharp-Bale (Англия){% endif %} </div>
+                  </div>  
+                  
+                </div>
+
+             {% endfor %}   <!-- result-->  
+        
+      {% endif %} 
+        {% endfor %}  <!-- class-->       
+    {% endfor %}  <!-- classorders-->       
+   {% endfor %}  <!-- sex-->       
+{% endfor %}  <!-- breed-->    
+
+
+      
+  
