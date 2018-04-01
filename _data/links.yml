@@ -47,9 +47,6 @@
   - alt: Результаты выставок
     url: shows-result
     
-  - alt: Заявка на моно-2019
-    url: shows-entry-closed
-    
   - alt: Опрос о выставках
     url: shows-opinions 
     
