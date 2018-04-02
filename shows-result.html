@@ -12,8 +12,30 @@ menu: shows-result
 <div class="container content  entry-content" >
   <div class="row">
     <div class="col-md-12">    
+      <p>Список клубов-должников:</p>
+      <p><strong>Нет отчета (без отчета НКП не может подтвердить сертификаты, выданные указанными клубами).</strong></p>
+      <ul>
+        <li>ОО &quot;КССКО&quot;, Киров</li>
+        <li>КЛЖ &laquo;ФАУНА&raquo;, Москва</li>
+        <li>ОО ПК КЛЖ &nbsp;&quot;ЛЮКОМ&quot;, Пермь</li>
+        <li>СООО КК Линос, Екатеринбург</li>
+      </ul>
+      <p><strong>Нет видео/фотоотчета:</strong></p>
+      <ul>
+        <li>ТКЦ &quot;ТРОЯН&quot;, Тольятти</li>
+        <li>ОО ПККСС, Пермь</li>
+        <li>НГООЛС Клуб Молосс, Новосибирск</li>
+      </ul>
+      <p><strong>Нет копий ринговых ведомостей с печатью клуба и подписью эксперта и видео/фотоотчета:</strong></p>
+      <ul>
+        <li>ООО КЦ Элита, Москва</li>
+      </ul>
+    </div>
+  </div>    
+  <div class="row">
+    <div class="col-md-12">    
        <div class="table-responsive">                  
-        <table class="table table-bordered table-calendar table-striped tablesorter" id="Mysorter">
+        <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
          <col width="7%"><col width="15%"><col width="7%"><col width="15%"><col width="20%"><col width="7%"><col width="7%"><col width="7%">
           <thead>
             <tr>
@@ -32,7 +54,16 @@ menu: shows-result
              {% assign clubs = site.data.showresult | sort_by:"number-club-show" | reverse %}
 
             {% for cl in clubs %}
-            <tr>              
+               {% if cl.rang == 'ПК' %}
+                <tr class="table-success">
+
+               {% endif %}
+               {% if cl.rang == 'КЧК' %}
+                <tr>
+               {% endif %}        
+               {% if cl.rang == 'ЧК' %}
+                <tr class="table-info">
+               {% endif %}              
               <td>{{ cl.date}}</td>            
               <td>{{ cl.city }}</td> 
               <td class="text-center vcenter">{{ cl.rang }}</td>   
