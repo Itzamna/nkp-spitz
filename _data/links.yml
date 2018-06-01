@@ -76,11 +76,11 @@
   submenu:
   - alt: Список чемпионов НКП
     url: champions
-
-  - alt: Внесение данных
-    url: champions-form 
     
-  - alt: Заявление на присвоение титула
+  - alt: О титулах
+    url: docs-titles    
+    
+  - alt: Оформление титула
     url: champions-entry
 
 - url: tests/index
