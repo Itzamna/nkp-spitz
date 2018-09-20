@@ -1,0 +1,31 @@
+---
+layout: empty-print
+menu: docs-ustav
+---
+<style>
+.main-umk{
+  width:800px;
+  height:34cm;
+  padding:10px 50px;
+  }
+b{font-size:1.2em;}
+p{font-size: 16px;} 
+h1{font-weight:strong}
+</style>
+{% for umk in site.data.umk %}
+<div class="main-umk">
+  <p><b><strong>{{ umk.name }}</strong></b></p>
+  <p>1. Для просмотра ЭФУ необходимо запустить любой браузер и зайти на сайт по адресу:</p>
+  <p style="padding-left:50px"> <b><u>http://5.8.182.90/</u></b></p>
+  <p>2. Для авторизации на сайте необходимо ввести:</p>
+  <p style="padding-left:50px">в поле “Email” логин: <b>{{ umk.login }}</b></p>
+  <p style="padding-left:50px">в поле “Пароль” пароль: <b>{{ umk.pass }}</b></p>
+  <p style="text-align:center"><img src="{{ site.url }}/assets/img/umk/umk1.png" width="500px"></p>
+  <p>3. После авторизации необходимо кликнуть по “Каталогу объектов”, а затем по УМК, находящемуся в нем.</p>
+  <p style="text-align:center"><img src="{{ site.url }}/assets/img/umk/umk2.png"  width="500px"></p>
+  <p>4. Внутри раздела с УМК можно выбрать любой учебник для просмотра, нажав по соответствующему заголовку.</p>
+  <p>5. В случае возникновения вопросов, пожалуйста, обращайтесь в службу технической поддержки по телефону<br> <b>+7 903 506-63-70, Асадуллаев Руслан</b>.</p>
+</div>
+{% endfor %}	
+
+
