@@ -41,10 +41,13 @@
   alt: Выставки НКП
   ico: fa-calendar
   submenu:
-  - alt: Календарь выставок
+  - alt: Календарь выставок-2018
     url: shows-calendar
-
-  - alt: Результаты выставок
+    
+  - alt: Календарь выставок-2019
+    url: shows-calendar
+    
+  - alt: Результаты выставок-2018
     url: shows-result
     
   - alt: Опрос о выставках

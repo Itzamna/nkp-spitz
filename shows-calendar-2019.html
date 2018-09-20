@@ -1,0 +1,84 @@
+---
+layout: default
+menu: shows-calendar
+---
+
+<div class="container content" >
+  <div class="title-box-v2">
+    <h2>Календарь выставок<span class="color-green"> ранга ЧК, ПК, КЧК</span> на 2019 год, </h2>
+    <p>составленный и утвержденный в соответствии с ВП РКФ и решением ВК НКП, подтверждённым решением Президиума НКП от 30.08.2018 г.</p>
+  </div>
+</div>
+
+<div class="container content  entry-content" >
+  <div class="row">
+    <div class="col-md-12">   
+      <h1>Пояснения:</h1>
+      <ul>В календарь не вошли:
+        <li>выставки клубов, подавших заявки после 1 апреля 2018 года (ВП РКФ);</li>
+        <li>выставки клубов, имеющих нарушения по отчетности и проведению;</li>
+        <li>выставки клубов, не набравших количество пометов шпицев по п. II ВП НКП.</li>
+        <li>выставки клубов, проводившие выставки в текущем году и не набравшие рекомендованное количество участников по п. II ВП НКП.</li>
+      </ul>
+      
+    <p>НКП поощрил клубы, которые отлично провели монопородные выставки (учитывая количество участников, призовой фонд, место проведения, отчетность по ВП НКП) и клубы, находящиеся в отдалённых регионах. </p>  
+    <p>ВНИМАНИЕ! До публикации САС-выставок на сайте РКФ возможны изменения в календаре НКП (перенос дат или изъятие выставок). ВК НКП не имеет возможности рассматривать ходатайства о включении в календарь дополнительных выставок и повышении ранга.</p>
+      
+     <div class="table-responsive">                  
+          
+      <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
+        <thead>
+          <tr>
+            <th>Даты</th>                     
+            <th>Город</th>
+            <th>Клуб</th>  
+            <th>Ранг</th>             
+            <th>Федерация</th>   
+            <th>Контакты</th>                
+          </tr>
+        </thead>
+        <tbody>
+          
+          {% for cl in site.data.calendar2019 %}
+          {% assign date1 = cl['Дата начала'] %}
+          {% assign date2 = cl['Дата окончания'] %}
+          {% assign city = cl['Город/Место проведения'] %}
+          {% assign club = cl['Название клуба'] %}
+          {% assign rang = cl['Ранг'] %}
+          {% assign federation = cl['Федерация'] %}
+          {% assign leader = cl['Контактное лицо'] %}
+          {% assign contacts = cl['Контакты организатора'] %}
+
+
+
+         {% if rang == 'ПК' %}
+          <tr class="table-success">
+            
+         {% endif %}
+         {% if rang == 'КЧК' %}
+          <tr>
+         {% endif %}        
+         {% if rang == 'ЧК' %}
+          <tr class="table-info">
+         {% endif %}              
+            <td>
+         {% if date1 == date2 %}              
+                {{ date1}}
+          {% endif %}        
+         {% if date1 != date2 %}              
+                {{ date1}}<br>{{ date2}} 
+          {% endif %}        
+            </td>            
+            <td>{{ city }}</td> 
+            <td>{{ club }}</td>  
+            <td>{{ rang }}</td>              
+            <td>{{ federation }}</td>
+            <td>{{ leader }}<br>{{ contacts }}</td>             
+          </tr>    
+       {% endfor %}            
+        </tbody>
+      </table> 
+      </div>
+    </div>
+  </div>
+</div>
