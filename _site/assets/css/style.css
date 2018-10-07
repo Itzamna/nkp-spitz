@@ -330,3 +330,10 @@ p.catalog {
   height: 200px;
   margin: 0 auto;  
 }
+
+.green-fa {
+color: green;
+}
+.red-fa {
+color: red;
+}

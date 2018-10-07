@@ -11,12 +11,13 @@ menu: shows-result
 </div>
 <div class="container content  entry-content" >
   <div class="row">
-    <div class="col-md-12">    
+    <div class="col-md-12">  
+      <!--
       <p>Список клубов-должников:</p>
       <p><strong>Нет отчета (без отчета НКП не может подтвердить сертификаты, выданные указанными клубами).</strong></p>
       <ul>
-        <li>СПБ РОО "КК "Элита", Санкт-Петербург 22.07.2018</li>
-      </ul>
+        <li></li>
+      </ul>-->
     </div>
   </div>    
   <div class="row">
@@ -58,7 +59,12 @@ menu: shows-result
               <td>{{ cl.judge }}</td>
               <td class="text-center vcenter">{{ cl.members }}</td> 
               <td class="text-center vcenter">{% if cl.catalog %} <a href="{{ site.url }}/assets/files/reports/{{ cl.catalog }}"><i class="fa fa-file-text-o icon-bg"></i></a>{% endif %}</td>             
-              <td class="text-center vcenter">{% if cl.photo %} <a href="{{ cl.photo }}" target="_blank"><i class="fa fa-picture-o"></i>{% endif %}</a> </td>             
+              <td class="text-center vcenter">
+                {% if cl.photo == 'да' %} <i class="green-fa fa fa-check" aria-hidden="true"></i> {% endif %}
+                {% if cl.photo == 'нет' %} <i class="red-fa fa fa-ban" aria-hidden="true"></i> {% endif %}
+                {% if cl.photo contains 'http' %} <a href="{{ cl.photo }}" target="_blank"><i class="fa fa-picture-o"></i></a> {% endif %}
+                  
+                </td>             
              <!-- <td>{{ cl.members }}</td>   -->          
             </tr>    
          {% endfor %}            
