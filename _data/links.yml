@@ -50,6 +50,10 @@
   - alt: Опрос о выставках
     url: shows-opinions 
     
+- url: nds-2019
+  alt: Националка-2019
+  ico: fa-star
+  
 - url: presidium
   alt: Президиум НКП
   ico: fa-address-card
