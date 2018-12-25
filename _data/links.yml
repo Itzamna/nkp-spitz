@@ -42,7 +42,7 @@
   ico: fa-calendar
   submenu:
   - alt: Календарь
-    url: shows-calendar
+    url: shows-calendar-2019
 
   - alt: Результаты выставок
     url: shows-result
