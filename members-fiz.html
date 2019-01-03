@@ -48,6 +48,8 @@ menu: members
           </thead>
           <tbody>
             {% for mmb in site.data.members %}
+            {% if $mmb.cont-2018%}
+
             <tr>
               <td>
                 {{ mmb.name }}                
@@ -62,7 +64,8 @@ menu: members
                   {% endif %}    
               </td>                             
             </tr>    
-         {% endfor %}            
+             {% endif %}  
+            {% endfor %}            
           </tbody>
         </table>  
       </div>   
