@@ -1677,14 +1677,15 @@ i.icon-bg-light-grey {
 }
 
 /*Blockquote*/
-blockquote {
-	padding: 5px 15px;
-	border-left-width: 2px;
-}
 
-blockquote p {
-	font-size: 14px;
+blockquote, blockquote p {
+    padding: 5px 5px;
+    border-left-width: 2px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #507e9c;
 	font-weight: 400;
+	font-size: 14px;  
 }
 
 blockquote h1,
