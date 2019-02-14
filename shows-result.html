@@ -20,57 +20,75 @@ menu: shows-result
       </ul>-->
     </div>
   </div>    
-  <div class="row">
-    <div class="col-md-12">    
-       <div class="table-responsive">                  
-        <table class="table table-bordered table-calendar tablesorter" id="Mysorter">
-         <col width="7%"><col width="10%"><col width="7%"><col width="15%"><col width="25%"><col width="7%"><col width="7%"><col width="7%">
-          <thead>
-            <tr>
-              <th>Дата</th> 
-              <th>Город</th>
-              <th>Ранг</th>  
-              <th>Клуб</th>  
-              <th>Эксперты</th>   
-              <th>Количество участников</th>                
-              <th>Результаты</th>                
-              <th>Фотоотчет</th>                
-              <!--<th>Отчет по сертификатам</th>-->                
-            </tr>
-          </thead>
-          <tbody>
-             {% assign clubs = site.data.showresult | sort_by:"number-club-show" | reverse %}
 
-            {% for cl in clubs %}
-               {% if cl.rang == 'ПК' %}
-                <tr class="table-success">
+      {% assign years = site.data.showresult| group_by_exp:'year', "year['year']"| sort_by:"number-club-show" | reverse %}  
+      {% for year in years %}
 
-               {% endif %}
-               {% if cl.rang == 'КЧК' %}
-                <tr>
-               {% endif %}        
-               {% if cl.rang == 'ЧК' %}
-                <tr class="table-info">
-               {% endif %}              
-              <td>{{ cl.date}}</td>            
-              <td>{{ cl.city }}</td> 
-              <td class="text-center vcenter">{{ cl.rang }}</td>   
-              <td>{{ cl.club }}</td> 
-              <td>{{ cl.judge }}</td>
-              <td class="text-center vcenter">{{ cl.members }}</td> 
-              <td class="text-center vcenter">{% if cl.catalog %} <a href="{{ site.url }}/assets/files/reports/{{ cl.catalog }}"><i class="fa fa-file-text-o icon-bg"></i></a>{% endif %}</td>             
-              <td class="text-center vcenter">
-                {% if cl.photo == 'да' %} <i class="green-fa fa fa-check" aria-hidden="true"></i> {% endif %}
-                {% if cl.photo == 'нет' %} <i class="red-fa fa fa-ban" aria-hidden="true"></i> {% endif %}
-                {% if cl.photo contains 'http' %} <a href="{{ cl.photo }}" target="_blank"><i class="fa fa-picture-o"></i></a> {% endif %}
+          <div class="panel-group acc-v1" id="accordion-{{year.name}}">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-{{year.name}}" href="#collapse-{{year.name}}" aria-expanded="false"> <span class="color-green"><i class="fa fa-star"></i> {{year.name}}</span> 
+									</a>
+								</h4>
+							</div>
+							<div id="collapse-{{year.name}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+                  <div class="table-responsive">                  
+                  <table class="table table-bordered test-results">
+                    <col width="7%"><col width="20%"><col width="7%"><col width="8%"><col width="30%"><col width="10%"><col width="10%">
+                    <thead>
+                      <tr>
+                        <th>Дата</th> 
+                        <th>Город</th>
+                        <th>Ранг</th>  
+                        <th>Клуб</th>  
+                        <th>Эксперты</th>   
+                        <th>Количество участников</th>                
+                        <th>Результаты</th>                
+                        <th>Фотоотчет</th>                    
+                      </tr>
+                    </thead>
+                    <tbody>      
+                    {% assign clubs = year.items| sort_by:"date" | reverse %}
+
+                      {% for cl in clubs %}
+                       {% if cl.rang == 'ПК' %}
+                        <tr class="table-success">
+                       {% endif %}
+                       {% if cl.rang == 'КЧК' %}
+                        <tr>
+                       {% endif %}        
+                       {% if cl.rang == 'ЧК' %}
+                        <tr class="table-info">
+                       {% endif %}              
+                        <td>{{ cl.date}}</td>            
+                        <td>{{ cl.city }}</td> 
+                        <td class="text-center vcenter">{{ cl.rang }}</td>   
+                        <td>{{ cl.club }}</td> 
+                        <td>{{ cl.judge }}</td>
+                        <td class="text-center vcenter">{{ cl.members }}</td> 
+                        <td class="text-center vcenter">{% if cl.catalog %} <a href="{{ site.url }}/assets/files/reports/{{ cl.catalog }}"><i class="fa fa-file-text-o icon-bg"></i></a>{% endif %}</td>             
+                        <td class="text-center vcenter">
+                        {% if cl.photo == 'да' %} <i class="green-fa fa fa-check" aria-hidden="true"></i> {% endif %}
+                        {% if cl.photo == 'нет' %} <i class="red-fa fa fa-ban" aria-hidden="true"></i> {% endif %}
+                        {% if cl.photo contains 'http' %} <a href="{{ cl.photo }}" target="_blank"><i class="fa fa-picture-o"></i></a> {% endif %}
+
+                        </td>             
+                     <!-- <td>{{ cl.members }}</td>   -->          
+                    </tr>   
+
+                        {% endfor %}  <!-- type-->       
+
+                    </tbody>
+                  </table> 
+                  </div>  
+									</div>
+								</div>
+							</div>
+						</div>
                   
-                </td>             
-             <!-- <td>{{ cl.members }}</td>   -->          
-            </tr>    
-         {% endfor %}            
-          </tbody>
-        </table> 
-     </div>
-    </div>
-  </div>
-</div>
+      {% endfor %}  <!-- breed-->     
+  
+  
+  
