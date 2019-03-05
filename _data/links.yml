@@ -50,6 +50,9 @@
   - alt: Опрос о выставках
     url: shows-opinions 
     
+  - alt: Заявка на проведение
+    url: blank-statement-show     
+    
 - url: nds-2019
   alt: Националка-2019
   ico: fa-star
