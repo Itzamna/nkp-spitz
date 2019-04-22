@@ -72,7 +72,12 @@ menu: shows-result
                         <td class="text-center vcenter">
                         {% if cl.photo == 'да' %} <i class="green-fa fa fa-check" aria-hidden="true"></i> {% endif %}
                         {% if cl.photo == 'нет' %} <i class="red-fa fa fa-ban" aria-hidden="true"></i> {% endif %}
-                        {% if cl.photo contains 'http' %} <a href="{{ cl.photo }}" target="_blank"><i class="fa fa-picture-o"></i></a> {% endif %}
+                        {% if cl.photo contains 'http' %} 
+                        {% assign links = cl.photo | split: ', '%}
+                          {% for link in links %}
+                            <a href="{{ link }}" target="_blank"><i class="fa fa-picture-o"></i></a>&nbsp;
+                          {% endfor %}
+                        {% endif %}
 
                         </td>             
                      <!-- <td>{{ cl.members }}</td>   -->          
