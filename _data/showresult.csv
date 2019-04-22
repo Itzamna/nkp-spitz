@@ -24,7 +24,7 @@ number-club-show,date,club,city,rang,judge,members,photo,catalog,year
 23,04.03.2018,"МРКЛСК ""ЗООЦЕНТР""",САРАНСК,ПК,АБРАКИМОВ ШАМИЛЬ (РОССИЯ),41,да,20180403-saransk.pdf,2018
 24,11.03.2018,ОО ПККСС,ПЕРМЬ,КЧК,ПОПЛАВСКАЯ Е.В. (РОССИЯ),26,https://www.facebook.com/media/set/?set=oa.1034650663355462&type=3,20180311-perm.pdf,2018
 25,18.03.2018,"АГДООЛЖ ""ОЛЬХОН""",АНГАРСК,КЧК,NEBOJSA SVRAKA (СЕРБИЯ),39,да,20180318-angarsk.pdf,2018
-26,25.03.2018,"РОО КК ""ПЛАНЕТА СОБАК""",МОСКВА,ЧК,"LYNN LYTHGOE (UK), JEAN SHARP-BALE(UK)",204,https://www.facebook.com/media/set/?set=oa.1017831978370664&type=3,20180325-moscow.pdf,2018
+26,25.03.2018,"РОО КК ""ПЛАНЕТА СОБАК""",МОСКВА,ЧК,"LYNN LYTHGOE (UK), JEAN SHARP-BALE(UK)",204,"https://www.facebook.com/media/set/?set=oa.1019413811545814&type=3, https://www.facebook.com/media/set/?set=oa.1017831978370664&type=3, https://www.facebook.com/media/set/?set=oa.945922475561615&type=3 ",20180325-moscow.pdf,2018
 27,31.03.2018,СПб ОО «КЛС «Невский Бриз» ,САНКТ-ПЕТЕРБУРГ,КЧК,TAMAS JAKKEL (ВЕНГРИЯ) ,24,https://www.facebook.com/media/set/?set=oa.1023421031145092&type=3,20180331-sankt-peterburg.pdf,2018
 28,31.03.2018,"ЗКОО ""Клуб Фауна""",ЧИТА,КЧК,РОДИНА ИНЕССА (РОССИЯ),18,да,20180331-chita.pdf,2018
 29,31.03.2018,"КООКО ""Курган-Град""",КУРГАН,ПК,MASALEVICHENE NATALYA (КАЗАХСТАН),92,https://www.facebook.com/media/set/?set=oa.1027577284062800&type=3,20180331-kurgan.pdf,2018
@@ -122,4 +122,7 @@ number-club-show,date,club,city,rang,judge,members,photo,catalog,year
 121,09.03.2019,РОО НКС БЭСТ,НОВОСИБИРСК,КЧК,РАДЮК СВЕТЛАНА (БЕЛАРУСЬ),18,нет,20190309-novosibirsk.pdf,2019
 122,16.03.2019,"ВРОО КСОДП ""Феникс""",ВОРОНЕЖ,ПК,БОБИКОВА ВАЛЕРИЯ (РОССИЯ),38,https://www.facebook.com/media/set/?set=oa.1299655950188264&type=3,20190316-voronezh.pdf,2019
 123,23.03.2019,"СРОО ""КФЦ ""Кредо Плюс""",ЮЖНО-САХАЛИНСК,КЧК,DOLEJSOVA OLGA (ЧЕХИЯ),22,https://www.facebook.com/media/set/?set=oa.1299663726854153&type=3,20190323-sahalin.pdf,2019
-124,24.03.2019,"ООКС ""Ласточка""",ПЕНЗА,КЧК,ГАЛИАСКАРОВА ЛАРИСА (РОССИЯ),24,"https://www.facebook.com/media/set/?set=oa.1296291223858070&type=3, https://www.facebook.com/media/set/?set=oa.1296318870521972&type=3, https://www.facebook.com/media/set/?set=oa.1300293170124542&type=3, https://www.facebook.com/media/set/?set=oa.1300299523457240&type=3",20190324-penza.pdf,2019
+124,24.03.2019,"ООКС ""Ласточка""",ПЕНЗА,КЧК,ГАЛИАСКАРОВА ЛАРИСА (РОССИЯ),24,https://www.facebook.com/media/set/?set=oa.1299669113520281&type=3,20190324-penza.pdf,2019
+125,06.04.2019,"СРОО ""СКЦ""",ЕКАТЕРИНБУРГ,ЧК,"ROGER BARENNE (ФРАНЦИЯ), LEOS JANCIK (ЧЕХИЯ)",175,"https://www.facebook.com/media/set/?set=oa.1296291223858070&type=3, https://www.facebook.com/media/set/?set=oa.1296318870521972&type=3, https://www.facebook.com/media/set/?set=oa.1300293170124542&type=3, https://www.facebook.com/media/set/?set=oa.1300299523457240&type=3 ",20190406-ekaterinburg.pdf,2019
+126,13.04.2019,"ОО КЛПС ""Кинология""",СЫЗРАНЬ,ПК,ОГАНОВА НАТАЛЬЯ (РОССИЯ),41,да,20190413-syzran.pdf,2019
+127,14.04.2019,КФРБ,УФА,ПК,КРАКОВСКАЯ ЛЮДМИЛА (РОССИЯ),21,да,20190414-ufa.pdf,2019
