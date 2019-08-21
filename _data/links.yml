@@ -48,10 +48,7 @@
     url: shows-result
     
   - alt: Опрос о выставках
-    url: shows-opinions 
-    
-  - alt: Заявка на проведение
-    url: blank-statement-show     
+    url: shows-opinions  
     
 - url: nds-2019
   alt: Националка-2019
