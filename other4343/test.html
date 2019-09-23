@@ -12,8 +12,11 @@ vk: данные
 email: данные
 ---
 <h3 class="hline-1">Напишите нам</h3>
-<div class="contacts-form">       
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSdzCmqpE0m4QpuwtOaSREqyoTI8pDFkZUz2mkAXTDlSrzzV_Q/formResponse" enctype='multipart/form-data' method='post' id="sky-form3" class="sky-form" novalidate="novalidate">
+<div class="contacts-form">     
+ <script type="text/javascript">var submitted=false;</script>
+ <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='http://nkp-spitz.org/';}"></iframe>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSdzCmqpE0m4QpuwtOaSREqyoTI8pDFkZUz2mkAXTDlSrzzV_Q/formResponse" enctype='multipart/form-data' method='post' id="sky-form3" class="sky-form" novalidate="novalidate" target="hidden_iframe"
+    onsubmit="submitted=true;">
   <table border="0" class="t-contacts-form">
     <colgroup><col width="55%"><col width="45%"></colgroup>
     <tbody>
@@ -38,6 +41,6 @@ email: данные
     </tbody>
   </table>
     <br><br>
-   <div style="text-align:right; margin-right:190px;margin-top:15px; "><a href="#" class="button" type="submit" value="Send">Отправить</a></div>
+   <div style="text-align:right; margin-right:190px;margin-top:15px; "> <input type="submit" value="Send" /></div>
   </form>
 </div>
