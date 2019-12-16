@@ -47,7 +47,7 @@ menu: members
               </td>   
               <td>
                   {% if $mmb.link %}
-                    <a href="{{ mmb.link }}">{{ mmb.kennel }}</a>                
+                    <a href="{{ mmb.link }}" rel="nofollow"><noindex>{{ mmb.kennel }}</noindex></a>             
                   {% else %} 
                       {{ mmb.kennel }}
                   {% endif %}    

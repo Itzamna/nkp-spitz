@@ -41,7 +41,7 @@ menu: members-clubs
           <tr>
             <td>
               {% if $cl.link%}
-              <a href="{{ cl.link }}">{{ cl.club }}</a>
+              <a href="{{ cl.link }}" rel="nofollow"><noindex>{{ cl.club }}</noindex></a>     
               {% else %}  
                 {{ cl.club }}
               {% endif %}  
