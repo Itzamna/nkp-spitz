@@ -37,6 +37,10 @@
   - alt: Бланки и памятки
     url: docs-info
     
+- url: recommendations
+  alt: Рекомендации НКП
+  ico: fa-file-text
+  
 - url: shows
   alt: Выставки НКП
   ico: fa-calendar
