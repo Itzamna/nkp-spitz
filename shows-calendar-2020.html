@@ -7,8 +7,7 @@ description: календарь монопородных выставок на 2
 
 <div class="container content" >
   <div class="title-box-v2">
-    <h2>Календарь выставок<span class="color-green"> ранга ЧК, ПК, КЧК</span> на 2019 год, </h2>
-    <p>составленный и утвержденный в соответствии с ВП РКФ и решением ВК НКП, подтверждённым решением Президиума НКП от 30.08.2018 г.</p>
+    <h2>Календарь выставок<span class="color-green"> ранга ПК и КЧК</span> на 2020 год, </h2>
   </div>
 </div>
 
@@ -16,6 +15,7 @@ description: календарь монопородных выставок на 2
   <div class="row">
     <div class="col-md-12">   
     <p><a href="http://nkp-spitz.org/shows-calendar.html" class="btn btn-sm rounded btn-primary" type="button"> Календарь на 2018</a></p>
+    <p><a href="http://nkp-spitz.org/shows-calendar-2019.html" class="btn btn-sm rounded btn-primary" type="button"> Календарь на 2019</a></p>
       
      <div class="table-responsive">                  
           
@@ -32,15 +32,14 @@ description: календарь монопородных выставок на 2
         </thead>
         <tbody>
           
-          {% for cl in site.data.calendar2019 %}
+          {% for cl in site.data.calendar2020 %}
           {% assign date1 = cl['Дата начала'] %}
           {% assign date2 = cl['Дата окончания'] %}
-          {% assign city = cl['Город/Место проведения'] %}
+          {% assign city = cl['Город проведения'] %}
           {% assign club = cl['Название клуба'] %}
           {% assign rang = cl['Ранг'] %}
           {% assign federation = cl['Федерация'] %}
-          {% assign leader = cl['Контактное лицо'] %}
-          {% assign contacts = cl['Контакты организатора'] %}
+          {% assign leader = cl['Контакты'] %}
 
 
 
@@ -66,7 +65,7 @@ description: календарь монопородных выставок на 2
             <td>{{ club }}</td>  
             <td>{{ rang }}</td>              
             <td>{{ federation }}</td>
-            <td>{{ leader }}<br>{{ contacts }}</td>             
+            <td>{{ leader }}</td>             
           </tr>    
        {% endfor %}            
         </tbody>
