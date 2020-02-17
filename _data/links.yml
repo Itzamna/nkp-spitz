@@ -21,6 +21,7 @@
   - alt: Статьи и литература
     url: literature 
     
+   
 - url: docs
   alt: Документы
   ico: fa-file-text-o
@@ -37,9 +38,6 @@
   - alt: Бланки и памятки
     url: docs-info
     
-- url: recommendations
-  alt: Рекомендации НКП
-  ico: fa-file-text
   
 - url: shows
   alt: Выставки НКП
@@ -57,7 +55,17 @@
 - url: nds-2020
   alt: Чемпионат-2020
   ico: fa-star
-  
+
+- url: recommendations
+  alt: Рекомендации НКП
+  ico: fa-file-text
+  submenu:
+  - url: recommendations
+    alt: Актирование помета
+    
+  - url: colors
+    alt: Об окрасах 
+    
 - url: presidium
   alt: Президиум НКП
   ico: fa-address-card
