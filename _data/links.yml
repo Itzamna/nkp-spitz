@@ -57,7 +57,7 @@
   ico: fa-star
 
 - url: recommendations
-  alt: Рекомендации НКП
+  alt:  На заметку
   ico: fa-file-text
   submenu:
   - url: recommendations
