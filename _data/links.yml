@@ -8,7 +8,10 @@
   submenu:
   - alt: Стандарт породы
     url: breed-standart
-
+    
+  - alt: Приложение к ПП РКФ
+    url: breeding-programm
+    
   - alt: Рекомендации по тестированию
     url: breed-tests
     
