@@ -60,7 +60,7 @@
   ico: fa-star
 
 - url: recommendations
-  alt:  На заметку
+  alt:  Окрасы
   ico: fa-file-text
   submenu:
   - url: recommendations
