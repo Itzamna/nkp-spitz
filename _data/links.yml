@@ -59,20 +59,22 @@
   alt: Чемпионат-2020
   ico: fa-star
 
-- url: recommendations
+- url: colors
   alt:  Окрасы
   ico: fa-file-text
-  submenu:
-  - url: recommendations
-    alt: Актирование помета
-    
-  - url: colors
-    alt: Об окрасах 
+  
+- url: recommendations
+  alt:  На заметку
+  ico: fa-file-text
     
 - url: presidium
   alt: Президиум НКП
   ico: fa-address-card
-    
+  
+- url: comissions
+  alt: Комиссии НКП
+  ico: fa-address-card
+  
 - url: members
   alt: Члены НКП
   ico: fa-user

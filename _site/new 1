@@ -1,0 +1,9 @@
+                  .row.dog_result
+                    .col-md-3
+                      =$vll
+                    .col-md-1
+                      =$kll['catalog_id']
+                    .col-md-4
+                      =dog_link($kll['dog_id'])
+                    .col-md-4
+                      =dog_owner($kll['dog_id'])

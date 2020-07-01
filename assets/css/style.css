@@ -344,3 +344,33 @@ color: red;
 .table-warning, .table-warning > th, .table-warning > td {
     background-color: #fcf8e3;
 }
+.small-font{
+	font-size: 0.8em;
+}
+.table>thead>tr>th.vertical {
+    vertical-align: top;
+ 	padding-top: 80px;
+
+}
+
+div.vertical
+{
+ margin-left: -85px;
+ margin-right: -85px;
+ width: auto;
+ transform: rotate(-90deg);
+ -webkit-transform: rotate(-90deg); /* Safari/Chrome */
+ -moz-transform: rotate(-90deg); /* Firefox */
+ -o-transform: rotate(-90deg); /* Opera */
+ -ms-transform: rotate(-90deg); /* IE 9 */
+ white-space: nowrap;
+	text-align:
+}
+
+th.vertical
+{
+ height: 190px;
+ line-height: 14px;
+ text-align: left;
+
+}
