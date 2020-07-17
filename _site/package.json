@@ -24,6 +24,6 @@
     "google-spreadsheet-to-json": "^0.3.0",
     "json": "^9.0.6",
     "json-cli-helpers": "^0.1.0",
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.19"
   }
 }
