@@ -64,7 +64,7 @@
   ico: fa-file-text
   
 - url: recommendations
-  alt:  На заметку
+  alt:  Актировка
   ico: fa-file-text
     
 - url: presidium
