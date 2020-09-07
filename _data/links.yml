@@ -64,7 +64,7 @@
   ico: fa-file-text
   
 - url: recommendations
-  alt:  Актировка
+  alt:  Актирование пометов
   ico: fa-file-text
     
 - url: presidium
