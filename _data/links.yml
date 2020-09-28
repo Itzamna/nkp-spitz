@@ -66,14 +66,10 @@
 - url: recommendations
   alt:  Актирование пометов
   ico: fa-file-text
-    
-- url: presidium
-  alt: Президиум НКП
-  ico: fa-address-card
   
-- url: comissions
-  alt: Комиссии НКП
-  ico: fa-address-card
+- url: sport
+  alt:  Шпицы и спорт
+  ico: fa-futbol-o
   
 - url: members
   alt: Члены НКП
@@ -114,7 +110,15 @@
   - alt: Внесение данных о протестированных собаках
     url: tests-form 
 
-
+    
+- url: presidium
+  alt: Президиум НКП
+  ico: fa-address-card
+  
+- url: comissions
+  alt: Комиссии НКП
+  ico: fa-address-card
+  
 - url: news
   alt: Новости
   ico:  fa-list
