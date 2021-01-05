@@ -47,7 +47,7 @@
   ico: fa-calendar
   submenu:
   - alt: Календарь
-    url: shows-calendar-2020
+    url: shows-calendar-2021
 
   - alt: Результаты выставок
     url: shows-result
@@ -55,8 +55,8 @@
   - alt: Опрос о выставках
     url: shows-opinions  
     
-- url: nds-2020
-  alt: Чемпионат-2020
+- url: nds-2021
+  alt: Чемпионат-2021
   ico: fa-star
 
 - url: colors
