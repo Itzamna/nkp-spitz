@@ -55,10 +55,6 @@
   - alt: Опрос о выставках
     url: shows-opinions  
     
-- url: nds-2021
-  alt: Чемпионат-2021
-  ico: fa-star
-
 - url: colors
   alt:  Окрасы
   ico: fa-file-text
