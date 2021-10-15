@@ -2,46 +2,53 @@
   alt: Главная
   ico: fa-home
   
-- url: breed
-  alt: О породе
-  ico: fa-certificate
+
+- url: docs
+  alt: Документы
+  ico: fa-file-text-o
   submenu:
+  
+  - alt: Устав НКП
+    url: docs-ustav
+  
   - alt: Стандарт породы
     url: breed-standart
     
   - alt: Приложение к ПП РКФ
     url: breeding-programm
-    
-  - alt: Рекомендации по тестированию
-    url: breed-tests
-    
-  - alt: Племенное положение РКФ
-    url: breed-docs
-    
-  - alt: Племенное положение Шпиц-Клуба Германии
-    url: breed-docs-vdh
-    
-  - alt: Статьи и литература
-    url: literature 
-    
-   
-- url: docs
-  alt: Документы
-  ico: fa-file-text-o
-  submenu:
-  - alt: Устав НКП
-    url: docs-ustav
-
-  - alt: Выставочное положение
+       
+  - alt: ПП РКФ
+    url: breed-docs 
+  
+  - alt: ВП  НКП
     url: docs-vp-2020
     
   - alt: О титулах
     url: docs-titles-2020
+     
+
+- url: useful
+  alt: Полезное
+  ico: fa-file-text
+  submenu:
+  - alt:  Актирование пометов  
+    url: recommendations
+    
+  - alt:  Окрасы
+    url: colors
+    
+  - alt: Рекомендации по тестированию
+    url: breed-tests
+    
+  - alt: ПП Шпиц-Клуба Германии
+    url: breed-docs-vdh  
+
+  - alt: Статьи и литература
+    url: literature   
     
   - alt: Бланки и памятки
     url: docs-info
     
-  
 - url: shows
   alt: Выставки НКП
   ico: fa-calendar
@@ -53,16 +60,8 @@
     url: shows-result
     
   - alt: Опрос о выставках
-    url: shows-opinions  
+    url: shows-opinions
     
-- url: colors
-  alt:  Окрасы
-  ico: fa-file-text
-  
-- url: recommendations
-  alt:  Актирование пометов
-  ico: fa-file-text
-  
 - url: sport
   alt:  Шпицы и спорт
   ico: fa-futbol-o
