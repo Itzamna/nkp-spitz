@@ -63,7 +63,7 @@
     url: shows-opinions
     
 - url: sport
-  alt:  Дрессировка и спорт
+  alt:  Шпицы и спорт
   ico: fa-futbol-o
   
 - url: members
@@ -99,9 +99,6 @@
   alt: Тестирование собак
   ico: fa-heartbeat
   submenu:
-   - url: sertpl
-    alt: МЕЖДУНАРОДНЫЙ СЕРТИФИКАТ ПРОВЕРКИ PL
-    
   - url: tests/index
     alt: Результаты тестов 
     
