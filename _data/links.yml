@@ -103,7 +103,10 @@
     alt: Результаты тестов 
     
   - alt: Внесение данных о протестированных собаках
-    url: tests-form 
+    url: tests-form
+    
+  - alt: Международный сертификат проверки PL
+    url: pl-sert
 
     
 - url: presidium
