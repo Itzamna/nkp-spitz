@@ -79,10 +79,10 @@
   - alt: Физические лица
     url: members-fiz
         
-  - alt: Вступление в НКП (клубы)
+  - alt: Вступление/Продление в НКП (клубы)
     url: membership-form-club 
 
-  - alt: Вступление в НКП (физические лица)
+  - alt: Вступление/Продление в НКП (физические лица)
     url: membership-form-fiz
 
 - url: champions
