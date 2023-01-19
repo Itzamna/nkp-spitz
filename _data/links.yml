@@ -65,6 +65,9 @@
   - alt: Опрос о выставках
     url: shows-opinions
     
+   - alt: Архив событий
+    url: archive
+    
 - url: sport
   alt:  Дрессировка и спорт
   ico: fa-futbol-o
