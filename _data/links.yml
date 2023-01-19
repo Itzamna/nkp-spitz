@@ -65,8 +65,8 @@
   - alt: Опрос о выставках
     url: shows-opinions
     
-  - alt: Архив событий
-    url: archive
+  - alt: Архив выставок
+    url: archive-show
     
 - url: sport
   alt:  Дрессировка и спорт
