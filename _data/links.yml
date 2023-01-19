@@ -53,8 +53,8 @@
   alt: Выставки НКП
   ico: fa-calendar
   submenu:
-  - alt: Национальная выставка 2022
-    url: show-n-2022
+  - alt: Национальная выставка
+    url: show-n-2023
   
   - alt: Календарь
     url: shows-calendar-2021
