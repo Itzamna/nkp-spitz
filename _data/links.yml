@@ -62,9 +62,6 @@
   - alt: Результаты выставок
     url: shows-result
     
-  - alt: Опрос о выставках
-    url: shows-opinions
-    
   - alt: Архив выставок
     url: archive-show
     
