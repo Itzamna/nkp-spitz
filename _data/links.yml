@@ -64,6 +64,11 @@
     
   - alt: Архив выставок
     url: archive-show
+
+- url: rating
+  alt: Рейтинг НКП
+  ico: fa-star
+
     
 - url: sport
   alt:  Дрессировка и спорт
