@@ -65,8 +65,11 @@
   - alt: Результаты выставок
     url: shows-result
     
-  - alt: Архив выставок
+  - alt: Архив национальных выставок
     url: archive-show
+     
+  - alt: Архив монопородных выставок
+    url: archive-show2
 
 - url: rating
   alt: Рейтинг НКП
